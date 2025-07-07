@@ -1,4 +1,4 @@
-## me
+## Adam
 - *Last Week*
 - V2
 	- Discussed monorepo devops with Ian, he's going to dockerize for consistency across Windows & Linux
@@ -26,13 +26,13 @@
 	- Open to work with others on their V2 goals
 
 
-## john
+## John
 - blanket TAs for new FY
 - AIX retrospective???
 - B0149
 - tableau day - 2025-07-24
 
-## benson
+## Benson
 - positions (b0149?)
 	- right now hr is reponsible for putting hr into system
 	- we need to wait on HR to add to DB using payroll info
@@ -41,4 +41,9 @@
 	- john also highlighted: divper, hr seasonal
 	- **ask him abt jira item: **
 
-## 
+## Ian
+- pdf rendering, starting with making it in HTML
+- lots of tentative in v2
+- lots of new v2 jira docs
+- tickets with newbies
+- 
