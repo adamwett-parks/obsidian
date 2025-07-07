@@ -1,3 +1,4 @@
+## me
 - *Last Week*
 - V2
 	- Discussed monorepo devops with Ian, he's going to dockerize for consistency across Windows & Linux
@@ -23,3 +24,8 @@
 	- Utilize Jira items to stay organized
 - V2
 	- Open to work with others on their V2 goals
+
+
+## john
+- blanket TAs for new FY
+- 
