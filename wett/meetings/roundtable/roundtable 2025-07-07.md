@@ -46,4 +46,9 @@
 - lots of tentative in v2
 - lots of new v2 jira docs
 - tickets with newbies
-- 
+
+## Michael
+- Ubidots?
+- UBOF?
+- visitation stuff
+	- 

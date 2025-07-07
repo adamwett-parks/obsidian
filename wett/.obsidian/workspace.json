@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "roundtable 2025-07-07.md",
+                "file": "meetings/roundtable/roundtable 2025-07-07.md",
                 "mode": "source",
                 "source": false
               },
@@ -184,10 +184,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc139236d42df8c2",
+  "active": "fdebb51981999327",
   "lastOpenFiles": [
+    "meetings/v2 day",
+    "meetings/roundtable",
+    "meetings",
     "TODO.md",
-    "roundtable 2025-07-07.md",
+    "meetings/roundtable/roundtable 2025-07-07.md",
     "Welcome.md"
   ]
 }
