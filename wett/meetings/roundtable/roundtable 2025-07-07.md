@@ -1,3 +1,4 @@
+*you should read everyone's notes at the start / before the next meeting*
 ## Adam
 - *Last Week*
 - V2
@@ -50,8 +51,13 @@
 ## Michael
 - Ubidots?
 - UBOF?
-- visitation date woes
-- WEX report using NCFS data
 
 ## Rachel
 - v2 a11y standard notes on jira & sharepoint
+
+## Jake
+- a11y in our user guides
+
+## Zelda
+- NCFS modules? where
+
