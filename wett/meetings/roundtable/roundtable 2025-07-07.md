@@ -50,5 +50,6 @@
 ## Michael
 - Ubidots?
 - UBOF?
-- visitation stuff
-	- 
+- visitation date woes
+- WEX report using NCFS data
+
