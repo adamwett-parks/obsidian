@@ -1,4 +1,4 @@
-*Last Week*
+- *Last Week*
 - V2
 	- Discussed monorepo devops with Ian, he's going to dockerize for consistency across Windows & Linux
 	- Built a reusable sidebar
@@ -16,8 +16,7 @@
 		- All Phase 1 objectives are mandatory, while teams can chose what & how much of Phase 2 they'd like to work on
 		- Phase 1 is easier, concrete, straightforward, highly guided
 		- Phase 2 composed of more "exploratory" goals
-
-*This Week*
+- *This Week*
 - SDC
 	- Continue migrating endpoints piecemeal
 	- Begin migrating some components
