@@ -53,3 +53,5 @@
 - visitation date woes
 - WEX report using NCFS data
 
+## Rachel
+- v2 a11y standard notes on jira & sharepoint
