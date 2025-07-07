@@ -55,6 +55,8 @@
 ## Rachel
 - v2 a11y standard notes on jira & sharepoint
 
+## David
+- cathy: when doing tickets do in test first, then verify on prod before responding
 ## Jake
 - a11y in our user guides
 
