@@ -30,3 +30,5 @@
 - blanket TAs for new FY
 - AIX retrospective???
 - B0149
+- tableau day - 2025-07-24
+- 
