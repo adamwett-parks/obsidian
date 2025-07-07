@@ -33,15 +33,12 @@
 - tableau day - 2025-07-24
 
 ## benson
-- john rabbithole
-	- divper
-	- hr seasonal
-	- 
-	- POSITIONS
-
 - positions (b0149?)
 	- right now hr is reponsible for putting hr into system
 	- we need to wait on HR to add to DB using payroll info
 	- we are making a report from HR payroll
 	- goal: HR payroll is synced with out system without HR for middle step
-	- 
+	- john also highlighted: divper, hr seasonal
+	- **ask him abt jira item: **
+
+## 
