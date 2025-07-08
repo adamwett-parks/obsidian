@@ -1,0 +1,47 @@
+## Install these:
+- [ ] [Adobe Creative Cloud](https://helpx.adobe.com/download-install/apps/download-install-apps/creative-cloud-apps/download-creative-cloud-desktop-app-from-web.html)
+	- [ ] Acrobat
+	- [ ] Photoshop
+	- [ ] Illustrator
+- [ ] Cisco Secure Client
+- [ ] [DBeaver](https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg)
+- [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [ ] [Office Suite](https://www.microsoft.com/en-us/microsoft-365/download-office)
+	- [ ] [Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app)
+	- [ ] [Outlook](https://apps.apple.com/us/app/microsoft-outlook/id985367838?mt=12&culture=en-us&country=us&srcurl=https%3A%2F%2Fwww.microsoft.com%2Fmicrosoft-365%2Foutlook%2Foutlook-for-mac)
+	- [ ] Word
+	- [ ] Excel
+	- [ ] PowerPoint
+	- [ ] [OneDrive](https://www.microsoft.com/en-us/microsoft-365/onedrive/download#Downloadtheapp)
+- [ ] [Figma](https://www.figma.com/download/desktop/mac)
+- [ ] [Firefox](https://www.mozilla.org/en-US/firefox/mac/)
+- [ ] [Chrome](https://www.google.com/chrome/)
+- [ ] [Edge](https://www.microsoft.com/en-us/edge/download)
+- [ ] [GitHub](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop?platform=mac)
+- [ ] [MySQL](https://dev.mysql.com/downloads/workbench/)
+	- [ ] Workbench
+	- [ ] Server
+- [ ] [Obsidian](https://obsidian.md/download)
+- [ ] [Slack](https://apps.apple.com/us/app/slack-for-desktop/id803453959)
+- [ ] [Webex](https://www.webex.com/downloads.html)
+- [ ] [VS Code](https://code.visualstudio.com/)
+
+## Set this up
+- [ ] Printer
+	- P-DENR-NRC-2507 - 2nd floor workroom
+	- P-DENR-NRC-3507 - 3rd floor workroom
+- [ ] SSH Shortcuts
+	- ~/.zshrc
+		- alias ssh-priv-test='ssh jelliott12@10.35.152.9'
+		- alias ssh-priv-prod='ssh jelliott12@10.35.152.23'
+		- alias ssh-pub-prod='ssh jelliott12@204.211.255.170'
+- [ ] DB Connections (all using NCID as username)
+	- PRIV PROD - 10.35.80.181:3309
+	- PRIV TEST - 10.35.152.9:3309
+	- PUB PROD - 10.35.152.20:3308
+	- PUB TEST - 10.35.152.9:3308
+- [ ] Clone these repos
+	- https://github.com/ncdpr/parks-passport.git
+	- https://github.com/ncdpr/priv-apps.git
+	- https://github.com/ncdpr/pub-apps.git
+	- https://github.com/ncdpr/Version-2.git
