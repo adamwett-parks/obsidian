@@ -7,7 +7,7 @@
 | AIX               | Annual Information Exchange                                       |
 | ARCH              | At Raleigh Central Headquarters                                   |
 | CHOP              | Chief of Operations - Deputy Director of Operations - Kathy Kapps |
-| CWTf              | Clean Water Trust Fund                                            |
+| CWTF              | Clean Water Trust Fund                                            |
 | DCI               | Division of Criminal Investigation                                |
 | DEDE              | Design & Development                                              |
 | DENR              | Department of Environmental Natural Resources                     |
@@ -35,6 +35,7 @@
 | NCFS              | North Carolina Financial System                                   |
 | NCTC              | North Carolina Trails Committee                                   |
 | NC-LWF            | NC Land & Water Fund                                              |
+| NHTF              | National Heritage Trust Fund                                      |
 | NPS               | National Park Service                                             |
 | NRC               | Nature Resource Center                                            |
 | NRID              | National Research Image Database                                  |
