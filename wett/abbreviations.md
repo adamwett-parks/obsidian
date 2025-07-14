@@ -20,6 +20,7 @@
 | DPI               | Department of Public Instruction                                  |
 | FAMA              | Facility Maintenance                                              |
 | FAS               | ????                                                              |
+| FITE              | Finance Team                                                      |
 | GDAC              | Government Data Analytics Center                                  |
 | GIS               | Geographical information services                                 |
 | INED              | Interpretation & Education                                        |
