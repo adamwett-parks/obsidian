@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/roundtable/rt 2025-07-14.md",
+                "file": "abbreviations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rt 2025-07-14"
+              "title": "abbreviations"
             }
           },
           {
@@ -214,8 +214,8 @@
   },
   "active": "98934a4e0e3a5c67",
   "lastOpenFiles": [
-    "abbreviations.md",
     "meetings/roundtable/rt 2025-07-14.md",
+    "abbreviations.md",
     "meetings/roundtable/roundtable 2025-07-07.md",
     "old/misc/onboarding/tracker.md",
     "old/misc/onboarding",
