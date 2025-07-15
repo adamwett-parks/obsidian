@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "quick-links"
             }
+          },
+          {
+            "id": "6e005991bfdf7a2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "trails meeting.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "trails meeting"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,8 +184,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "98d6d198f9312bdd",
+  "active": "6e005991bfdf7a2b",
   "lastOpenFiles": [
+    "trails meeting.md",
+    "quick-links.md",
     "documentation/onboarding/abbreviations.md",
     "documentation/onboarding/auth.md",
     "documentation/onboarding/help.md",
