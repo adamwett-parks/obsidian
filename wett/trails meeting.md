@@ -17,4 +17,7 @@ pull in info for a summary and have them tell us what they want to remove / add 
 
 
 Esri GIS software
-AGOL
+AGOL "gis online"
+some public / some private
+some fields (like surface) might be mostly blank, some fields have their meanings chnaged
+
