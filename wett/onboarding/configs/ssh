@@ -1,0 +1,28 @@
+# Paste this file into ~/.ssh/config (you may have to create it, make sure to chmod 700)
+# Replace awettreich with your NCID (see auth.md)
+# Run `ssh-copy-id <hostname>` to easily add your keys
+
+Host test
+  HostName 10.35.152.9
+  User awettreich
+  IdentityFile ~/.ssh/id_ed25519_ncdpr_git
+
+Host priv
+  HostName 10.35.152.23
+  User awettreich
+  IdentityFile ~/.ssh/id_ed25519_ncdpr_git
+
+Host privdb
+  HostName 10.35.80.181
+  User awettreich
+  IdentityFile ~/.ssh/id_ed25519_ncdpr_git
+
+Host pub
+  HostName 204.211.255.170
+  User awettreich
+  IdentityFile ~/.ssh/id_ed25519_ncdpr_git
+
+Host pubdb
+  HostName 10.35.152.20
+  User awettreich
+  IdentityFile ~/.ssh/id_ed25519_ncdpr_git
