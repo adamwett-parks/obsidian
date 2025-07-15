@@ -1,0 +1,37 @@
+- wsl
+  - plug into ethernet
+  - login to admin user
+  - `wsl --install`
+  - `wsl --status`
+  - login to normal user
+  - `wsl --install`
+- creative cloud
+  - IT ticket pending...
+- ssh access
+  - john will submit IT ticket
+- badge
+  - need appointment
+  - id people are typically open all the time
+  - https://www.doa.nc.gov/media/16774/open
+  - 109 EAST NORTH STREET
+  - bring drivers license
+- parking
+  - need appointment
+  - same place as parking
+  - need signed by director?
+  - TODO: add form
+- jira
+  - get added to 
+- sharepoint
+  - project, look for article about deploying projects
+  - meeting thursday??
+- desk
+  - can get a keyboard & mouse from john
+
+- aspira
+  - for AIX
+  - how to access it?
+  - table 1: land areas
+  - table 3: attendance
+  - table 6: 
+  - table 7: volunteer info?
