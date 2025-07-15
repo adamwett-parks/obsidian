@@ -21,3 +21,6 @@ AGOL "gis online"
 some public / some private
 some fields (like surface) might be mostly blank, some fields have their meanings chnaged
 
+
+intersections need to look like they do on the ground (for public)
+email him
