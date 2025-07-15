@@ -11,4 +11,7 @@ small T trails in 1 layer, might be able to tell whether or not its a state tria
 
 state trails in separate layer
 MAKE SURE trail stat = "DESIGNATED"
+difficulty on website / trail map is ambiugous, not on GIS
+
+pull in info for a summary and have them tell us what they want to remove / add & then run my m&c
 
