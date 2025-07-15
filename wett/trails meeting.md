@@ -5,4 +5,10 @@ what is "all trails"?
 no definition of a11y for trials, no label!!
 
 use their trails layer for data
+hit liver service for arcgis
+
+small T trails in 1 layer, might be able to tell whether or not its a state trial
+
+state trails in separate layer
+MAKE SURE trail stat = "DESIGNATED"
 
