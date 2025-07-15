@@ -15,3 +15,6 @@ difficulty on website / trail map is ambiugous, not on GIS
 
 pull in info for a summary and have them tell us what they want to remove / add & then run my m&c
 
+
+Esri GIS software
+AGOL
