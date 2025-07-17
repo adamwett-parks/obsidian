@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "trails meeting.md",
+                "file": "stacks/stack 2025-07-17.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "trails meeting"
+              "title": "stack 2025-07-17"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f0986c084d637c5",
@@ -180,12 +181,15 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "6e005991bfdf7a2b",
   "lastOpenFiles": [
     "trails meeting.md",
+    "stacks/stack 2025-07-17.md",
+    "stacks",
     "quick-links.md",
     "documentation/onboarding/abbreviations.md",
     "documentation/onboarding/auth.md",
@@ -200,7 +204,7 @@
     "heap.md",
     "TODO.md",
     "logs/week 2025-07-14.md",
-    "logs",
+    "stacks",
     "meetings/roundtable/rt 2025-07-07.md",
     "old/misc/onboarding",
     "old/misc/scripts/git_pull_automation.sh",
@@ -209,7 +213,6 @@
     "old",
     "meetings/v2 day",
     "meetings/roundtable",
-    "meetings",
     "Welcome.md"
   ]
 }
