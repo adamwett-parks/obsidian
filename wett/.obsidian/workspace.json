@@ -35,8 +35,7 @@
               "title": "stack 2025-07-17"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,12 +184,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6e005991bfdf7a2b",
+  "active": "98d6d198f9312bdd",
   "lastOpenFiles": [
-    "trails meeting.md",
     "stacks/stack 2025-07-17.md",
-    "stacks",
     "quick-links.md",
+    "trails meeting.md",
+    "stacks",
     "documentation/onboarding/abbreviations.md",
     "documentation/onboarding/auth.md",
     "documentation/onboarding/help.md",
