@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TODO.md",
+                "file": "meetings/2025-07-21 rt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TODO"
+              "title": "2025-07-21 rt"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "98d6d198f9312bdd",
   "lastOpenFiles": [
+    "TODO.md",
     "quick-links.md",
     "lore.md",
     "app ideas.md",
@@ -193,7 +194,6 @@
     "documentation",
     "old/misc/README.md",
     "old/misc/hours.md",
-    "TODO.md",
     "logs/week 2025-07-14.md",
     "logs",
     "old/misc/onboarding",
