@@ -1,4 +1,3 @@
-# App ideas
 - NCDPR link shortener
   - allows putting links / files in sharepoint
   - look into embeds
