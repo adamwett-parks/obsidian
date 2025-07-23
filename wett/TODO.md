@@ -1,6 +1,9 @@
 -  michael's testing
 - schema
 
-Looking into this more it seems like Prisma has pretty solid naming conventions, and that deviating from them would add more boilerplate and complexity. Some of these would be impossible to follow using MariaDB. 
-
-For example: `FK__collected_bucket_list_item__bucket_list_item_id` exceeds MariaDB's limit of 
+I think we can adhere to these requirements except the following:
+- prefixing table names with the name of the application
+- no unique id for many-to-many
+	- a user can visit a park/trail multiple times
+- foreign key constraint naming
+- 
