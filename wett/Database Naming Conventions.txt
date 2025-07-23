@@ -1,0 +1,79 @@
+# Overview
+---
+We want to use a consistent method of naming things in the V2 Database to keep things organized and understandable. In my research, I have found many varying opinions as to the best conventions to follow when creating database objects. Here is a proposal of the way we might name things to meet the goal outlined below.
+
+If you would like to see the reasoning behind these decisions, visit https://ncparks-dbteam.atlassian.net/browse/V2-66.
+
+# Goal
+---
+How we name our databases is an exercise of **communication** and **organization**. We want to create a naming convention that makes our database easily understood and navigated.
+
+We also want our convention to be **documented** and readily **available** to those who edit our database. We will store our naming conventions in our Entity Relationship Diagram and other places.
+
+## Conventions for Names
+---
+
+General
+* We will not use a space (' ') in any name.
+* We will use underscores to separate words.
+* We will avoid using reserved words
+* We will avoid using abbreviations
+* We will limit the use of acronyms
+  * Acronyms that are Parks specific and have a clear definition may be used (such as DPR)
+
+Tables
+* We will make all table names singular.
+* We will prefix all table names with the application they pertain to
+  * This prefix will be the name of the application in all capital letters
+  * ex: for the visit table pertaining to the Visitation application, the name will be VISITATION_visit
+
+Columns
+* We will not prefix each column name with the abbreviation of its table name.
+* We will name bit fields with an affirmative boolean name like ‘is_deleted', 'has_permission', or 'is_valid’, rather than 'deleted', or 'permission'
+
+Keys
+* We will name the primary key of most tables as 'id'.
+* We will name foreign keys as the primary key of the other table (most commonly id) with its table name prefixed to it but without the organizational prefix.
+  * ex: for a column referencing the id of the VISITATION_visit table, the foreign key would be named 'visit_id'
+* For linking tables between a many-to-many relationship we will not create a unique 'id' field but will make the primary key a composite key of the columns in the table. (see the 'course_subjects' table in V2 for an example)
+* We will name FOREIGN KEY CONSTRAINTS with the abbreviation FK first, then the name of the table holding the foreign key, and then the name of the table that the foreign key references. We will use “__” (two underscores) to separate 'FK' and each table name.
+  * ex: CONSTRAINT `FK__user__park` FOREIGN KEY (`park_id`) REFERENCES `park` (`id`)
+  * ex: CONSTRAINT `FK__inventory_type__type` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`)
+
+Views
+* We will name views with the prefix of their application followed by the word 'VIEW' followed by the tables that it involves and what it focuses on specifically
+  * ex: GLOBAL_VIEW_user_role_for_application
+
+Functions and Procedures
+* We will name functions and procedures with the application name first, 'FN' (for a function) or 'PR' (for a procedure) next, and words that describe what it does and what objects it deals with.
+  * ex: GLOBAL_PR_nondpr_revoke_access
+
+
+## Conventions for Code
+---
+
+SELECT Statements
+* We will use the ANSI-Standard Join clauses (SQL-92) instead of the old-style joins. 
+  * See https://www.isbe.net/Documents/SQL_server_standards.pdf Section II. Subsection 1. for an example
+* We will not use "SELECT *" in our queries but rather name out each column
+* If we use an alias in our query, we will name it as the first or first two letters of the table name
+
+INSERT Statements
+* We will use a column list in our INSERTS
+  * See https://www.isbe.net/Documents/SQL_server_standards.pdf Section II. Subsection 2. for an example
+
+General Statement Formats
+* We will format our statements in an easy-to-read manner.
+  * They will be broken into multiple lines when they are large
+  * They will be spaced for readability when applicable
+
+Comments
+* We will comment our code
+
+Aliases
+* We will alias table names to disclude the application prefix 
+* It is necessary since we are not using unique column names, to alias the names of the columns we want in a query that uses a JOIN.
+  * The aliases we use in this situation should be in the format "table_name__column_name". Where the period separating the table and column is replaced by 2 underscores.
+  * For example, `INVENTORY_inventory_type.id` would be aliased as `inventory_type__id`.
+  * This will keep names consistent and translatable by the DomainModel class
+
