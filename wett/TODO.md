@@ -5,10 +5,12 @@ Looking into this more there are some conventions that can easily be followed an
 
 We should definitely:
 - prohibit spaces in names
-- prohibit reserved words
+- prohibit reserved words in names
+- prohibit plural table names
 - avoid abbreviations
 - avoid acronyms
-- 
+- use `id` as primary key
+- use affirmative boolean names
 
 These can be followed relatively easily:
 - use underscores in table names
@@ -16,7 +18,6 @@ These can be followed relatively easily:
 
 
 I believe we should omit the following conventions:
-
 - prefixing table names with the name of the application
 	- parks_passport is the name of the database so any external references to our tables would be redundant: `parks_passport.parks_passport_collected_bucket_list_items(bucket_list_item)`
 - no unique id for many-to-many
