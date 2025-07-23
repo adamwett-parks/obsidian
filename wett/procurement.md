@@ -1,2 +1,4 @@
-- monitor
+- monitor to replace docking station
+	- 4.4 63E4GAR2US
+	- 4.5 63D1ZAR1US
 	- 
