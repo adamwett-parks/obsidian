@@ -3,7 +3,3 @@
 	- 4.5 63D1ZAR1US
 - mouse
 	- 5.17 6H1A5AA
-
-
-	- 4.4 63E4GAR2US
-	- 4.5 63D1ZAR1US
