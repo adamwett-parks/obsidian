@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "procurement.md",
+                "file": "meetings/2025-07-31 goals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "procurement"
+              "title": "2025-07-31 goals"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f0986c084d637c5",
@@ -171,8 +172,9 @@
   },
   "active": "2a26971aa3ab6e89",
   "lastOpenFiles": [
-    "lore.md",
     "procurement.md",
+    "meetings/2025-07-31 goals.md",
+    "lore.md",
     "v2-66 db.md",
     "TODO.md",
     "Untitled.md",
@@ -200,7 +202,6 @@
     "documentation/onboarding/acronyms.md",
     "documentation/onboarding/tracker.md",
     "documentation",
-    "old/misc/README.md",
     "stacks",
     "old/misc/onboarding",
     "old/misc/scripts/git_pull_automation.sh",
