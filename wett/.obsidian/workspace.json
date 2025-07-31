@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8f58aab91eabb288",
+        "id": "dae5c451e5100259",
         "type": "tabs",
         "children": [
           {
-            "id": "ff03697a2353f61b",
+            "id": "2a26971aa3ab6e89",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TODO.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "TODO"
+              "title": "New tab"
             }
           }
         ]
@@ -169,10 +165,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ff03697a2353f61b",
+  "active": "2a26971aa3ab6e89",
   "lastOpenFiles": [
-    "meetings/2025-07-28 rt.md",
     "TODO.md",
+    "meetings/2025-07-28 rt.md",
     "meetings/2025-07-21 rt.md",
     "Untitled.md",
     "v2-66 db.md",
