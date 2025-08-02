@@ -1,2 +1,7 @@
-During the project the primary skill I was able to provide to my team was my ability to resolve disputes and reach a consensus on design decisions and technical nuances.
+During the project the primary skill I was able to provide to my team was my ability to resolve disputes and reach a consensus on design decisions and technical nuances. I made my role into one of facilitation where I'd step back and listen to what not necessarily what each person wanted but what the team needed.
 
+Being 2 hours away was very challenging. I also work full time so it was difficult to schedule times where everyone would meet together. Oftentimes I'd get off work and be kind of out of it and not pay as much attention or give as much mental effort as I should have.
+
+This gave me insight to the challenges working on an international or multicultural team. Our solution was to rely on technical documentation as our primary form of communciation and decision making instead of synchronous meetings.
+
+Overall through the experience of the project I was able to learn first hand what working across a time difference was like. Naturally overcoming this discrepancy by shifting our focus to documenting things as opposed to relying on meetings for everything gave me insight into what to focus on to work e
