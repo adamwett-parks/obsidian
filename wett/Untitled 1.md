@@ -1,4 +1,4 @@
-During the project the primary skill I was able to provide to my team was my ability to resolve disputes and reach a consensus on design decisions and technical nuances. I made my role into one of facilitation where I'd step back and listen to what not necessarily what each person wanted but what the team needed.
+During the project the primary skill I was able to provide to my team was my ability to resolve disputes and reach a consensus on design decisions and technical nuances. I made my role into one where I'd back up my perspective and listen to what not necessarily what each person wanted but what the team needed to reach our goals. I was able to achieve this by adopting more of a higher-level approach, letting teammates focus on the nitty gritty of individual systems.
 
 Being 2 hours away was very challenging. I also work full time so it was difficult to schedule times where everyone would meet together. Oftentimes I'd get off work and be kind of out of it and not pay as much attention or give as much mental effort as I should have.
 
