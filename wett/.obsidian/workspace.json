@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/2025-07-31 goals.md",
+                "file": "docs/onboarding/travel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-07-31 goals"
+              "title": "travel"
             }
           }
         ]
@@ -169,12 +169,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a26971aa3ab6e89",
+  "active": "fdebb51981999327",
   "lastOpenFiles": [
+    "Untitled",
+    "docs/onboarding/tracker.md",
+    "docs/onboarding/servers.md",
+    "docs/onboarding/running-priv.md",
+    "docs/onboarding/README.md",
+    "docs/onboarding/priv-apps.md",
+    "meetings/2025-07-31 goals.md",
+    "docs/priv-apps",
+    "docs/version-2",
+    "docs/passport",
     "brian.md",
     "brian short.md",
     "Untitled 1.md",
-    "meetings/2025-07-31 goals.md",
     "procurement.md",
     "lore.md",
     "v2-66 db.md",
@@ -192,20 +201,11 @@
     "meetings/2025-07-15 trails.md",
     "meetings/2025-07-14 rt.md",
     "meetings/2025-07-07 rt.md",
-    "meetings/2025-06-27 v2.md",
-    "stacks/stack 2025-07-17.md",
-    "meetings/passport/pp 2025-07-16.md",
-    "meetings/passport/state trails team 2025-07-15.md",
     "meetings/passport",
     "stacks",
-    "documentation/onboarding/abbreviations.md",
-    "documentation/onboarding/auth.md",
-    "documentation",
+    "docs",
     "stacks",
     "old/misc/onboarding",
-    "old/misc/scripts/git_pull_automation.sh",
-    "old/misc/scripts",
-    "old/misc",
-    "old"
+    "old/misc/scripts/git_pull_automation.sh"
   ]
 }
