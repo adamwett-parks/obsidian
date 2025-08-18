@@ -1,0 +1,4 @@
+- ai
+	- github copilot doesn't collect data, available in vs code, is it chill? https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements
+	- in my free time i have been experimenting with the Jira API, was looking into making a RAG system to help answer questions and use a model tiny enough to be ran locally on our computers
+	- 
