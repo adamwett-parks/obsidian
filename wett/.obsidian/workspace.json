@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "613f183cb1a5f4d2",
+        "id": "9563eaa677abd3f1",
         "type": "tabs",
         "children": [
           {
-            "id": "081dad984d194a6e",
+            "id": "62b6553bdc2d462f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -165,8 +165,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "081dad984d194a6e",
+  "active": "62b6553bdc2d462f",
   "lastOpenFiles": [
+    "Untitled 3.md",
     "docs/onboarding/travel.md",
     "Untitled 2.md",
     "Untitled",
@@ -197,7 +198,6 @@
     "conflict-files-obsidian-git.md",
     "meetings/2025-07-16 pp.md",
     "meetings/2025-07-15 trails.md",
-    "meetings/2025-07-14 rt.md",
     "meetings/passport",
     "stacks",
     "docs",
