@@ -1,12 +1,11 @@
-# Table of Contents
-- [Welcome](#welcome)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Setup](#setup)
-- [Scripts](#scripts)
-- [Business Rules](#business-rules)
-
-# Welcome
+## Table of Contents
+- Welcome
+- Tech Stack
+- Project Structure
+- Setup
+- Scripts
+- Business Rules
+## Welcome
 
 Sup SDC team!
 
@@ -16,10 +15,9 @@ We hope to make it easier for you to get started adding on to the codebase and t
 
 <!-- tech stack start -->
 \newpage
-# Tech Stack
+## Tech Stack
 
 ## Overview
-
 We're going to talk about our tech stack and the reason we chose the things we did. But here's a quick summary:
 
 - Next.js
@@ -30,26 +28,22 @@ We're going to talk about our tech stack and the reason we chose the things we d
 - Typescript
 - Biome.js
 
-## Next.js
-
+### Next.js
 Next.js is a powerful opinionated React framework. At NCDPR, we are currently migrating legacy PHP apps to Next.js, hence the odd choice of a full stack React framework for an offline first app.
 
 The app itself is a Next.js app using the App Router. We aren't using any server components since all data must be cached on the client. We chose to use route handlers to create explicit API endpoints which will come in handy for offline caching.
 
-## Tanstack Query
-
+### Tanstack Query
 Tanstack Query is a React library that simplifies data fetching and state management. It provides a set of hooks that make it easy to fetch, cache, and synchronize server state with the UI. Without it, you'd be stuck using `useEffect` and `useState` to manage data fetching, which can lead to a lot of boilerplate code and potential bugs. FYI, It used to be called 'React Query'. [Their docs are very detailed.](https://tanstack.com/query/latest) but make sure you're reading the docs for v5!
 
 Tanstack Query also allows us to easily cache the state of API requests on the client, which is essential for offline functionality. It provides built-in support for caching, background updates, and stale data management, making it a great fit for our offline-first app.
 
-## Prisma
-
+### Prisma
 Prisma is an ORM that simplifies database access and management. It provides a type-safe query builder and a schema definition language that makes it easy to define and manage database schemas. Migrations are a breeze with Prisma, and it generates types that we can use safely in code running on both the client and server. All things Prisma are imported from `@prisma/client` Note that while it's called the `client` you should only use import from here on the server!!
 
 The sole exception is where we export Prisma *types* from `@/types`.
 
-## Valibot
-
+### Valibot
 Valibot is a runtime type validator. It lets you verify the shape of data at runtime and keeps the communication between the client and the server typesafe. You can create schemas and 'infer' typescript types from them.
 
 ## Tailwind CSS
