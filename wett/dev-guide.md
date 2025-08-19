@@ -5,16 +5,15 @@
 - Setup
 - Scripts
 - Business Rules
-## Welcome
 
+## Welcome
 Sup SDC team!
 
 This documentation is intended to give you some insight into the design of the Parks Passport app. We hope to make it easier for you to get started adding on to the codebase and to help you understand the "why" behind some of the decisions we made.
-## Tech Stack
 
+## Tech Stack
 ### Overview
 We're going to talk about our tech stack and the reason we chose the things we did. But here's a quick summary:
-
 - Next.js
 - Tanstack Query
 - Prisma
