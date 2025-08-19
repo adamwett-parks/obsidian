@@ -9,9 +9,7 @@
 
 Sup SDC team!
 
-This documentation is intended to give you some insight into the design of the Parks Passport app.
-We hope to make it easier for you to get started adding on to the codebase and to help you understand the "why" behind some of the decisions we made.
-
+This documentation is intended to give you some insight into the design of the Parks Passport app. We hope to make it easier for you to get started adding on to the codebase and to help you understand the "why" behind some of the decisions we made.
 ## Tech Stack
 
 ### Overview
@@ -46,20 +44,12 @@ Valibot is a runtime type validator. It lets you verify the shape of data at run
 ### Tailwind CSS
 Tailwind CSS is a styling framework that provides a set of utility classes for building responsive and customizable user interfaces. It allows us to quickly prototype and iterate on designs without writing custom CSS. Tailwind's utility-first approach promotes consistency and reusability across the codebase. The styles are short and easy to read, and they have great IDE support.
 
-\newpage
-
-Now these next items are strictly developer tools. They are technically optional, but we don't know what we would do without them. Getting familiar with these tools will make your life much easier when working on the passport.
-
 ### Typescript
 Typescript is a superset of JavaScript that adds static typing to the language. It provides type checking at compile time, which helps catch errors early in the development process. Typescript also improves code readability and maintainability by providing clear type definitions and interfaces. It will save you from many mysterious `undefined` errors at runtime. It also is really useful if you change the name of things frequently, as you will get errors in all the places you need to update.
 
 ### Biome.js
 Biome.js is a code formatter and linter that helps maintain code quality and consistency across the codebase. It provides a set of rules and guidelines for writing clean and maintainable code, and it can automatically format code to adhere to these standards. Biome.js also integrates with popular IDEs and text editors, making it easy to use in the development workflow. We chose Biome because it is faster than alternatives like ESLint and Prettier, and it combines both linting and formatting into a single tool. Also because ESLint can be a pain to configure properly and Biome works well out of the box with minimal configuration. We've added the Biome.js VSCode extension to the .vscode recommended extensions so it should prompt you to install it when you open the project.
 
-<!-- tech stack end -->
-
-<!-- project structure start -->
-\newpage
 ## Project Structure
 - `public`
   - `fonts`
@@ -117,8 +107,6 @@ All project scripts are located in the `package.json` file under the `scripts` s
   - Runs the Biome.js linter to check for code quality and style issues. This command is useful to ensure your code adheres to the project's coding standards.
 - `npm run fix`
   - This will run the Biome.js linter and automatically fix any issues it can. This is a great way to quickly clean up your code, but make sure you commit your changes before running this command, as it will modify your files.
-- `npm run liny`
-  - This will run the Biome.js linter but won't make write changes.
 - `npm run typecheck`
   - Runs the TypeScript type checker to ensure your code is type-safe. This command is useful to catch any type errors in your code before running it. Or if you are playing whack-a-mole after moving a file or renaming a field, this will help you find any type errors that may have been introduced.
 - `npm run clean`
@@ -244,27 +232,29 @@ The Prisma schema contains comments on the relationships between each of these, 
 - Essentially the same thing as a stamp except visits are only marked automatically and you can have multiple visits persisted in the database
 - Used to track when & how often a user visits a park or a trail
 
-### Bucket List Items `bucket_list_items`
+### Bucket List Item
+- `bucket_list_items`
 - A small challenge that a user can complete
 - Usually associated with a park but a few are not
 - These are not verified and can be toggled freely at any time
 
-### Collected Bucket List Items `bucket_list_items_collected`
+### Collected Bucket List Item
+- `bucket_list_items_collected`
 - Represents a user checking off a bucket list item as 'done'
 
-### Favorite Park/Trail `favorite`
+### Favorite Park/Trail
+- `favorites`
 - A user can mark a park or a trail as a favorite
 - This can be used as a filter within the app
 
 ### Address
+- `addresses`
 - A street address and/or GPS location associated with a park/trail
 - Parks will have an `address_id` that points to the primary address associated with the park, usually a visitor's center
 
-## Some tidbits of info
+### Some tidbits of info
 - Read `@types/index.ts` and you can see what fields are joined
 - You'll notice that `bucket_list_items` has its own table, but there is only a `stamp_collection` table. A stamp has no information on it's own that is not directly associated with it's respective park/trail
 - For the most part, abbreviations within the division are the first two letters of each word in the park. So `Lake Norman` becomes `LANO`.
 - Any tables where the rows have a relationship with a user have `created`, `updated`, and `deleted` fields.
 - We only let users soft-delete things, that is, instead of removing a row from the database we set the `deleted` field to true.
-
-<!-- business rules end -->

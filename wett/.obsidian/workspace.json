@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9563eaa677abd3f1",
+        "id": "57192860825d6cbf",
         "type": "tabs",
         "children": [
           {
-            "id": "62b6553bdc2d462f",
+            "id": "126c1d76a4e50aff",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.10"
-            }
-          },
-          {
-            "id": "8baa0657e6b0b8d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dev Guide.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Dev Guide"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,7 +166,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8baa0657e6b0b8d6",
+  "active": "126c1d76a4e50aff",
   "lastOpenFiles": [
     "Dev Guide.md",
     "Untitled 3.md",
