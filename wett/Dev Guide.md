@@ -12,12 +12,9 @@ Sup SDC team!
 This documentation is intended to give you some insight into the design of the Parks Passport app.
 We hope to make it easier for you to get started adding on to the codebase and to help you understand the "why" behind some of the decisions we made.
 
-
-<!-- tech stack start -->
-\newpage
 ## Tech Stack
 
-## Overview
+### Overview
 We're going to talk about our tech stack and the reason we chose the things we did. But here's a quick summary:
 
 - Next.js
@@ -46,27 +43,24 @@ The sole exception is where we export Prisma *types* from `@/types`.
 ### Valibot
 Valibot is a runtime type validator. It lets you verify the shape of data at runtime and keeps the communication between the client and the server typesafe. You can create schemas and 'infer' typescript types from them.
 
-## Tailwind CSS
-
+### Tailwind CSS
 Tailwind CSS is a styling framework that provides a set of utility classes for building responsive and customizable user interfaces. It allows us to quickly prototype and iterate on designs without writing custom CSS. Tailwind's utility-first approach promotes consistency and reusability across the codebase. The styles are short and easy to read, and they have great IDE support.
 
 \newpage
 
 Now these next items are strictly developer tools. They are technically optional, but we don't know what we would do without them. Getting familiar with these tools will make your life much easier when working on the passport.
 
-## Typescript
-
+### Typescript
 Typescript is a superset of JavaScript that adds static typing to the language. It provides type checking at compile time, which helps catch errors early in the development process. Typescript also improves code readability and maintainability by providing clear type definitions and interfaces. It will save you from many mysterious `undefined` errors at runtime. It also is really useful if you change the name of things frequently, as you will get errors in all the places you need to update.
 
-## Biome.js
-
+### Biome.js
 Biome.js is a code formatter and linter that helps maintain code quality and consistency across the codebase. It provides a set of rules and guidelines for writing clean and maintainable code, and it can automatically format code to adhere to these standards. Biome.js also integrates with popular IDEs and text editors, making it easy to use in the development workflow. We chose Biome because it is faster than alternatives like ESLint and Prettier, and it combines both linting and formatting into a single tool. Also because ESLint can be a pain to configure properly and Biome works well out of the box with minimal configuration. We've added the Biome.js VSCode extension to the .vscode recommended extensions so it should prompt you to install it when you open the project.
 
 <!-- tech stack end -->
 
 <!-- project structure start -->
 \newpage
-# Project Structure
+## Project Structure
 - `public`
   - `fonts`
   - `icons`
@@ -97,7 +91,6 @@ Biome.js is a code formatter and linter that helps maintain code quality and con
 - `next.config.ts`
 - `biome.json`
 
-\newpage
 `public` contains all our static assets, such as icons, photos, and stamps
 `prisma` contains our database schema and migration files
 `src` is where the main application code lives:
@@ -110,15 +103,10 @@ Biome.js is a code formatter and linter that helps maintain code quality and con
 
 Feel free to change or reorganize this however you want. You don't have to use our project structure, but we hope it gives you a good starting point. The important thing is to keep your code organized and maintainable as you add new features. We've found this to be a good structure for our app, but you may find something that works better for you. Just remember to keep the `public` and `prisma` directories at the root level, as they are used by Next.js and Prisma respectively. We also recommend keeping a `src` directory at the root level to keep things organized, but you can remove it if you prefer. Just make sure to update the `tsconfig.json` and `next.config.js` files to reflect the new paths.
 
-<!-- project structure end -->
-
-<!-- scripts start -->
-\newpage
-# Scripts
-
+## Scripts
 All project scripts are located in the `package.json` file under the `scripts` section. Here's what they all do and what they are used for:
 
-## General
+### General
 - `npm run dev`
   - Starts the Next.js development server. This is the command you will use most often during development to see your changes in real-time.
 - `npm run build`
@@ -137,7 +125,7 @@ All project scripts are located in the `package.json` file under the `scripts` s
   - Cleans up the `.next` and `node_modules` directories. You'll only really use this if you're having issues with your local environment and need to start fresh. It will remove all the built files and dependencies, so you'll need to run `npm run install` again after running this command.
 - `npm run env:copy`: Copies the `.env.example` file to `.env.development` and `.env.local`. This command is useful for setting up your local environment variables without having to do it manually. :)
 
-## Database
+### Database
 - `npm run db:migrate`
   - Runs the Prisma migrations to update the database schema. This command is used to apply any changes made to the Prisma schema.
 - `npm run db:seed`
@@ -147,27 +135,17 @@ All project scripts are located in the `package.json` file under the `scripts` s
 - `npm run db:dump`
   - Dumps the database schema to a file (dump.sql). This command is useful for backing up the database schema or sharing it with others. We use this to let us share any changes to the actual data within the database with other developers. It's very clutch for keeping the database in sync across all your teams' local environments.
 
-
-<!-- scripts end -->
-
-<!-- setup start -->
-\newpage
-# Setup
-
+## Setup
 Okay now that you've seen a high-level overview of the tech stack and project structure, let's get you set up to start developing.
 
 First you must download `nodejs`. We recommend using a version manager like `nvm` to install Node.js. You can find instructions for installing `nvm` [here](https://github.com/nvm-sh/nvm).
 
-```bash
-nvm install --lts
-nvm use --lts
-```
+`nvm install --lts`
+`nvm use --lts`
 
 After you install node on your system, install the dependencies for the project using the Node Package Manager `npm`. Navigate to the root of the repo and run:
 
-```bash
-npm install
-```
+`npm install`
 
 One you have the dependencies installed, let's set up the database. We use MariaDB as our database, so you'll need to have it installed on your machine for local development. You can find instructions for installing MariaDB [here](https://www.bytebase.com/reference/mariadb/how-to/how-to-install-mariadb-on-mac-ubuntu-centos-windows/).
 
@@ -203,21 +181,16 @@ This will start the Next.js development server and you should be able to access 
 
 You can find more infomation about all these scripts in the [scripts documentation](scripts).
 
-
-<!-- setup end -->
-
-<!-- business rules start -->
-\newpage
-# Business Rules
-
+## Business Rules
 I hate the word "business rules" but I can't find another term for this that fits better.
-Essentially, this describes all of the rules, relationships, and nuances we found out when building the application. These are mostly immutable since they describe things at NCDPR. Some of the names can be quite confusing, but we are stuck with these names that other people at the Division have been using long before even the paper passport was created.
+Essentially, this describes all of the rules, relationships, and nuances we found out when building the application. These are mostly immutable since they describe things at NCDPR. Some of the names can be quite confusing, but we are stuck with these names that other people at the Division have been using long before even the paper passport was created. There are also passport specific rules that are more flexible.
 
-There are also passport specific rules that are more flexible. I've divided them into two sections below:
+The table names are the first `monospaced` bullet.
 
-## Division Rules
+### Division Rules
 
-### State Parks: `parks`
+#### State Park
+- `parks`
 - Each row represents a State Park
 - These fields in the schema were chosen (and named) to be a superset of the information on the paper passport
   - park_type
@@ -229,23 +202,27 @@ There are also passport specific rules that are more flexible. I've divided them
   - you_can_find
   - accesses
 
-### Trails: `trails`
+#### Trail
+- `trails`
 - Each row represents a Park Trail or a State Trail
 - State Trails will have a non-null `stamp_image` and Park Trails will have this field set to null
 
-## Passport Rules
+### Passport Rules
 
 The Prisma schema contains comments on the relationships between each of these, but for the most part they are one-to-many.
 
-### User `users`
+#### User
+- `users`
 - Logs in with an email and password
 - We sign a JWT and persist it within the client's cookies to keep track of their session
 
-### Notes: `notes`
+#### Note
+- `notes`
 - A user can create notes related to a park OR notes unrelated to a park (aka "general notes")
 - A user can only have a single note per park
 
-### Collected Stamp `stamp_collected`
+#### Collected Stamp
+- `stamp_collected`
 - A collectable associated with a park XOR a trail
 - Only one stamp can be collected per feature (with one exception)
 - Location verification
@@ -262,7 +239,8 @@ The Prisma schema contains comments on the relationships between each of these, 
     - If a manual collection is done within the bounds of a park/trail, then it is marked as verified
   - If a user has an unverified stamp and attempts to create a verified stamp, then the unverified one is soft-deleted and a new collection is created for them
 
-### Visit
+#### Visit
+- `visits`
 - Essentially the same thing as a stamp except visits are only marked automatically and you can have multiple visits persisted in the database
 - Used to track when & how often a user visits a park or a trail
 
