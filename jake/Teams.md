@@ -1,0 +1,23 @@
+step one: 
+- Show everyone how to schedule meetings
+	- Schedule within the channel and invite anyone you need
+- Channels available
+	- TIC
+		- Is it possible to add a new discussion for each ticket
+			- sync Jira comments with the Teams comments
+			- Auto assign (using tagging based on day of week and some form of schedule set up in the teams channel)
+	- Software Approvals?
+	- V2
+	- Attendance
+	- Accessibility
+	- AIX
+	- Round Table
+		- New discussion is created every Tuesday
+			- With a link to the next week's Word Doc
+	- Moneycounts - separate out by module
+	- Documentation
+	- NCSU SDC
+	- Natural Resource Unit Alignment
+	- AWS
+	- Trainings
+	- General
