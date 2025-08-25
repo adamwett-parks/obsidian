@@ -58,3 +58,19 @@ FROM park p
 JOIN address a
 
 ON p.address_id = a.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+on notifications -> delete notifications, scrollable
