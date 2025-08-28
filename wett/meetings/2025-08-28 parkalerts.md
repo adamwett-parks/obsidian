@@ -1,6 +1,6 @@
 - open up to IP range
 - proxy endpoint
-- schema
+- DC schema
 	- https://digitalcommons.nc.gov/guide/help-topics/alert
 	- internal_title
 	- alert_level (info, success, warning, breaking)
@@ -12,3 +12,7 @@
 	- show_on_pages_or_sections: array of relative paths, use wildcard
 		- /state-parks/chimney-rock-state-park/*
 	- published (bool)
+
+- our schema
+	- schedule_up (date)
+	- schedule_down (date)
