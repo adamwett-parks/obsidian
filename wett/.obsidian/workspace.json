@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/2025-08-28 parkalerts.md",
+                "file": "timesheet/2025-08-28 timesheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-08-28 parkalerts"
+              "title": "2025-08-28 timesheet"
             }
           }
         ]
@@ -172,8 +172,8 @@
   },
   "active": "0a7e4052f1c136f9",
   "lastOpenFiles": [
-    "timesheet/2025-08-28 timesheet.md",
     "meetings/2025-08-28 parkalerts.md",
+    "timesheet/2025-08-28 timesheet.md",
     "timesheet/2025.md",
     "docs/sop/Code Review SOP.md",
     "timesheet",
