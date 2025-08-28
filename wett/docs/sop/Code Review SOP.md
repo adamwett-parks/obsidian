@@ -15,4 +15,15 @@ Or on a line-by-line basis by hovering over a line
 ![[CleanShot 2025-08-28 at 07.10.14.png]]
 ![[CleanShot 2025-08-28 at 07.11.00.png]]
 
-If you are 
+To add a suggestion (aka propose an edit), press `ctrl+g` or click the icon to the right of `Preview`:
+
+![[CleanShot 2025-08-28 at 07.20.33.png]]
+
+When you are finished with your comment, click `Start a Review`:
+
+![[CleanShot 2025-08-28 at 07.21.02.png]]
+
+This will create a `Pending` comment that the author can address
+
+![[CleanShot 2025-08-28 at 07.22.23.png]]
+
