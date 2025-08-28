@@ -3,15 +3,14 @@
 - schema
 	- https://digitalcommons.nc.gov/guide/help-topics/alert
 	- title (internal)
-
 	- info
-	- alert_level: info, success, warning, breaking
+	- alert_level (info, success, warning, breaking)
 	- alert_title (95 char)
 	- alert_summary (180 char)
-	- url
-	- link_text
-	- show_on_pages_or_sections: array of relative paths, maybe could use wildcard
+	- alert_weight (number)
+	- link_url (string)
+	- link_text (string)
+	- show_on_pages_or_sections: array of relative paths, use wildcard
 		- /state-parks/chimney-rock-state-park/*
-	- alert_weight
-	- published
-	- 
+	- published (bool)
+- 
