@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "timesheet/2025-08-28 timesheet.md",
+                "file": "meetings/2025-08-28 parkalerts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-08-28 timesheet"
+              "title": "2025-08-28 parkalerts"
             }
           }
         ]
@@ -172,8 +172,9 @@
   },
   "active": "0a7e4052f1c136f9",
   "lastOpenFiles": [
-    "timesheet/2025.md",
     "timesheet/2025-08-28 timesheet.md",
+    "meetings/2025-08-28 parkalerts.md",
+    "timesheet/2025.md",
     "docs/sop/Code Review SOP.md",
     "timesheet",
     "CleanShot 2025-08-28 at 07.24.00.png",
@@ -215,7 +216,6 @@
     "meetings/2025-07-28 rt.md",
     "meetings/2025-07-21 rt.md",
     "Database Naming Conventions.txt",
-    "heap.md",
     "meetings/passport",
     "stacks"
   ]
