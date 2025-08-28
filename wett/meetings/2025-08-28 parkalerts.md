@@ -1,1 +1,7 @@
-- 
+- open up to IP range
+- proxy endpoint
+- schema
+	- title
+	- level
+	- info
+	- 
