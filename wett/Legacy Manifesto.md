@@ -21,4 +21,37 @@ class Params
 }
 ```
 
-Now let's create a `public static function` called `getParam` to 
+Now let's create a `public static function` called `getParam` to help us get a parameter from the `$_REQUEST` variable
+
+```php
+// filename: _global/Utils/Params.php
+
+<?php
+
+namespace Utils;
+
+class Params
+{
+  public static function getParam($key, $fallback = null)
+  {
+	if (isset($_REQUEST[$key])) {
+		return $_REQUEST[$key];
+	}
+	return $default;
+  }
+}
+
+?>
+```
+
+Now anytime you need to consume a URL parameter you can using this syntax
+
+```php
+
+// ... something ...
+
+$
+
+// ... something else ...
+
+```
