@@ -2,8 +2,7 @@
 - proxy endpoint
 - schema
 	- https://digitalcommons.nc.gov/guide/help-topics/alert
-	- title (internal)
-	- info
+	- internal_title
 	- alert_level (info, success, warning, breaking)
 	- alert_title (95 char)
 	- alert_summary (180 char)
@@ -13,4 +12,3 @@
 	- show_on_pages_or_sections: array of relative paths, use wildcard
 		- /state-parks/chimney-rock-state-park/*
 	- published (bool)
-- 
