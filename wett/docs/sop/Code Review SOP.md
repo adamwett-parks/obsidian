@@ -1,10 +1,14 @@
-## Accessing via Github
-1. Click the `Files Changed` tab
+## Creating a code review
+
+Click the `Files Changed` tab
+
 ![[Pasted image 20250828070010.png]]
 
-2. Adjust your settings
+Adjust your settings
+
 ![[Pasted image 20250828070436.png]]
-3. You may switch back to the classic page if you prefer / if there are too many comments
+
+You may switch back to the classic page if you prefer / if there are too many comments
 
 ## Comments
 *The word "comments" in this SOP refers to comments left on a PR via GitHub, unless further specified*
@@ -26,4 +30,10 @@ When you are finished with your comment, click `Start a Review`:
 This will create a `Pending` comment that the author can address
 
 ![[CleanShot 2025-08-28 at 07.22.23.png]]
+
+When you are done leaving comments, scroll back up to the top of the page and click `Finish your review` and then `Submit review`
+
+![[CleanShot 2025-08-28 at 07.24.00.png]]
+
+You can approve the request directly or request the changes in your suggestions via the radio options.
 
