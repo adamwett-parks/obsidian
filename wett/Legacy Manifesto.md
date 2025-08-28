@@ -47,11 +47,25 @@ class Params
 Now anytime you need to consume a URL parameter you can using this syntax
 
 ```php
-
 // ... something ...
 
-$
+/*
+
+$variable = \Namespace\ClassName::functionName()
+								^^
+								syntax for accessing a static field
+*/
+
+$start_date = \Utils\Params::getParam('start_date');
+$end_date = \Utils\Params::getParam('end_date');
+
 
 // ... something else ...
-
 ```
+
+### Why do it this way?
+Using `includes` every time you need to import some other code is really unsafe. It could potentially override any of the variables in the global scope. The entire included file is executed and that could execute unanticipated side effects
+
+Adding code via namespaces has great intellisense. You get none when using include. You can Ctrl+Click on the name of the functions or classes and your IDE will take you right to the definition.
+
+Using static
