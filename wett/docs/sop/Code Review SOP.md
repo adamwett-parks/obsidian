@@ -37,3 +37,7 @@ When you are done leaving comments, scroll back up to the top of the page and cl
 
 You can approve the request directly or request the changes in your suggestions via the radio options.
 
+## Resolving a code review
+
+## Self-code reviews
+It's good practice to *leave a review of your own code* on GitHub before asking someone to take a look at your PR. Take a second look at it line by line. If you have any questions or want to highlight big changes or design decisions, leave your own comments!
