@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "docs/sop/Code Review SOP.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -47,8 +47,7 @@
               "title": "2025-08-28 parkalerts"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,12 +196,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdebb51981999327",
+  "active": "0a7e4052f1c136f9",
   "lastOpenFiles": [
+    "Pasted image 20250828070010.png",
     "Pasted image 20250828070949.png",
     "Pasted image 20250828070436.png",
     "Pasted image 20250828070218.png",
-    "Pasted image 20250828070010.png",
     "docs/sop/Code Review SOP.md",
     "timesheet/2025-08-28 timesheet.md",
     "meetings/2025-08-28 parkalerts.md",
