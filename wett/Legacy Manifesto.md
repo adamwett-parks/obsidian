@@ -68,4 +68,21 @@ Using `includes` every time you need to import some other code is really unsafe.
 
 Adding code via namespaces has great intellisense. You get none when using include. You can Ctrl+Click on the name of the functions or classes and your IDE will take you right to the definition.
 
-Using static
+Using static methods in particular is nice so you don't have to instantiate the class in whatever file you use.
+
+### Tips
+Try to make your functions as *pure* as possible. A pure function is defined as a function that:
+1. Given identical params returns identical values
+2. Has no side effects (no mutation of local variables, reference arguments, or IO streams)
+
+A great example of a pure function is `array_flip`. It doesn't modify the array you pass into it, it just returns an array where the keys and values have been "flipped"
+
+```php
+$arr1 = ['key' => 'value'];
+$arr2 = array_flip($arr1);
+
+print_r($arr_1) // ['key' => 'value']
+print_r($arr_2) // ['value' => 'key']
+```
+
+A good 
