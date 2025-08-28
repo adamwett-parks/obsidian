@@ -35,8 +35,7 @@
               "title": "2025-08-28 parkalerts"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f0986c084d637c5",
@@ -186,10 +184,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8515ac690bff163b",
+  "active": "0a7e4052f1c136f9",
   "lastOpenFiles": [
-    "timesheet/2025-08-28 timesheet.md",
     "meetings/2025-08-28 parkalerts.md",
+    "timesheet/2025-08-28 timesheet.md",
     "timesheet/2025.md",
     "docs/sop/Code Review SOP.md",
     "timesheet",

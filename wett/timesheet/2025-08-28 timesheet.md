@@ -8,6 +8,7 @@
 ## TODO
 - [x] create draft of code review docs
 - [x] reach out to SDC team to finalize weekly meeting schedule
+- [x] park alerts meeting
 - [ ] have someone 'test drive' code review draft
 - [ ] finish writing code review documentation
 - [ ] have Benson & Cole do a code review on PA-1327 branch
