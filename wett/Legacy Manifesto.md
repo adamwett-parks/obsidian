@@ -4,7 +4,21 @@ Our legacy codebase is littered with bad practices. My goal is to create an easy
 
 
 ## Static Class Methods
-PHP namespaces allow us to write reusable pure functions instead of reinventing the wheel. In this tutorial we will create a class to help us with 
+PHP namespaces allow us to write reusable pure functions instead of reinventing the wheel. In this tutorial we will create a class to help us with dealing with URL parameters 
 
-A class can be created in the `_global` folder that is autoloaded in any file that includes `globalFunctions.php`. 
+A class can be created in the `_global` directory that is autoloaded in any file that includes `globalFunctions.php`. Since this class isn't specific to any application in particular, I'm putting it in the `_global/Utils` folder. Each subdirectory under `_global` is it's own namespace.
 
+```php
+// filename: _global/Utils/Params.php
+
+<?php
+
+namespace Utils;
+
+class Params
+{
+  // todo
+}
+```
+
+Now let's create a `public static function` called `getParam` to 
