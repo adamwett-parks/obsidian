@@ -10,4 +10,4 @@ Another intention behind the GPS coordinates is that they also serve as a backup
 
 I'd like to add that if anything in the project is confusing to the point of being unproductive / getting in your way, please feel free to change it. 
 
-I'm personally a "move fast and break things" kind of dev. We'd rather have y'all replace a design element with something your team understands so it's water under the bridge and you can build a feature v.s. going back and forth on desig rationaln  
+I'm personally a "move fast and break things" kind of dev. We'd rather have y'all replace a design element with something your team understands so it's water under the bridge and you can build a feature. Much of the design of the system is quite amorphous and I'd recommend treating it as such. Nothing here is written in stone.
