@@ -8,4 +8,6 @@ I think we are on the same page when it comes to the correct way the schema shou
 
 Another intention behind the GPS coordinates is that they also serve as a backup if an `address` has a "bad street address". Think a trail head, a boat launch, something in the middle of the woods, etc. Originally, when we were just copying the info on the pages of the paper passport, only one was listed per park, and in my opinion were too vague to be useful. It was unclear what the coordinates of a park actually pointed to. We decided to add them to each address to make them actually useful.
 
-I'd like to add that your team 
+I'd like to add that if anything in the project is confusing to the point of being unproductive / getting in your way, please feel free to change it. 
+
+I'm personally a "move fast and break things" kind of dev. We'd rather have y'all replace a design element with something your team understands so it's water under the bridge and you can build a feature v.s. going back and forth on desig rationaln  
