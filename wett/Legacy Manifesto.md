@@ -71,7 +71,7 @@ Adding code via namespaces has great intellisense. You get none when using inclu
 Using static methods in particular is nice so you don't have to instantiate the class in whatever file you use.
 
 ### Tips
-Try to make your functions as *pure* as possible. A pure function is defined as a function that:
+Try to make your functions as **pure** as possible. A pure function is defined as a function that:
 1. Given identical params returns identical values
 2. Has no side effects (no mutation of local variables, reference arguments, or IO streams)
 
@@ -85,4 +85,21 @@ print_r($arr_1) // ['key' => 'value']
 print_r($arr_2) // ['value' => 'key']
 ```
 
-A good 
+A good example of an **impure** function is `array_push`. It modifies the array you pass in and returns a status code.
+
+```php
+$arr = [1, 2];
+array_push($arr, 3);
+
+print_r($arr); // [1, 2, 3]
+```
+
+Not all functions can be pure. If you are reading or writing to a database, that is an impure function. However, we can make it *mostly* pure by accepting the `$connection` as a param and returning the results.
+
+```php
+
+function somewhat_pure_insert($connection) {
+	
+}
+
+```
