@@ -1,0 +1,2 @@
+- checkout a file from another branch
+	- 
