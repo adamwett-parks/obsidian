@@ -1,2 +1,5 @@
-- checkout a file from another branch
-	- 
+```
+# checkout a file from another branch
+git checkout main -- path/to/file
+
+```
