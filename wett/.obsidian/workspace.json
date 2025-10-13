@@ -11,14 +11,13 @@
             "id": "6d81abe6649656cf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "logs/2025-09-25.md",
-                "mode": "source",
-                "source": false
+                "file": "meetings/Untitled.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "2025-09-25"
+              "icon": "lucide-table",
+              "title": "Untitled"
             }
           }
         ]
@@ -172,12 +171,16 @@
   },
   "active": "6d81abe6649656cf",
   "lastOpenFiles": [
+    "templates/{{date}} roundtable.md",
+    "meetings/Untitled.base",
+    "meetings/2025-06-27 v2.md",
+    "logs/2025-09-25.md",
+    "templates",
     "logs/2025-10-08.md",
     "atoms/separated employees.md",
     "atoms/git cheatsheet.md",
     "atoms",
     "Untitled 6.md",
-    "logs/2025-09-25.md",
     "Legacy Manifesto.md",
     "Untitled 5.md",
     "logs",
@@ -211,12 +214,7 @@
     "docs/onboarding/servers.md",
     "docs/onboarding/running-priv.md",
     "docs/onboarding/README.md",
-    "docs/onboarding/priv-apps.md",
-    "meetings/2025-07-31 goals.md",
     "docs/priv-apps",
-    "docs/version-2",
-    "docs/passport",
-    "brian.md",
-    "Database Naming Conventions.txt"
+    "docs/version-2"
   ]
 }
