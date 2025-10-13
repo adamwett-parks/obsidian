@@ -4,20 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9ec6f79cfcc4f331",
+        "id": "07d9eaf6721ac922",
         "type": "tabs",
         "children": [
           {
-            "id": "6d81abe6649656cf",
+            "id": "8cfc890e6654fe0b",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "meetings/Untitled.base",
-                "viewName": "Table"
+                "file": "meetings/2025-10-13 roundtable.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "2025-10-13 roundtable"
             }
           }
         ]
@@ -169,8 +170,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6d81abe6649656cf",
+  "active": "8cfc890e6654fe0b",
   "lastOpenFiles": [
+    "meetings/2025-09-29 rt.md",
+    "meetings/2025-10-13 roundtable.md",
     "templates/{{date}} roundtable.md",
     "meetings/Untitled.base",
     "meetings/2025-06-27 v2.md",
@@ -213,7 +216,6 @@
     "docs/onboarding/tracker.md",
     "docs/onboarding/servers.md",
     "docs/onboarding/running-priv.md",
-    "docs/onboarding/README.md",
     "docs/priv-apps",
     "docs/version-2"
   ]
