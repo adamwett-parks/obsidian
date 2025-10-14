@@ -1,0 +1,12 @@
+## Me
+- Last Week
+	- [PA-1464] Add filming permit to SAP (ready for testing)
+	- [PA-1434] PARs New Request (code review)
+	- Helped Rachel with RAP (bless her heart)
+	- Ticket triaging
+- This Week
+	- Test & document PA-1464
+	- Investigate caching issue for SDC; might have them move on
+	- SDC field trip??
+	- Park Units SSOT meeting
+	- #OpenToWork
