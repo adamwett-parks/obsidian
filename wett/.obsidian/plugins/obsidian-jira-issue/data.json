@@ -2,12 +2,12 @@
   "accounts": [
     {
       "alias": "Default",
-      "host": "https://mycompany.atlassian.net",
-      "authenticationType": "OPEN",
+      "host": "https://ncparks-dbteam.atlassian.net",
+      "authenticationType": "BEARER_TOKEN",
       "password": "",
       "priority": 1,
       "color": "#000000",
-      "use2025Api": false,
+      "use2025Api": true,
       "cache": {
         "statusColor": {},
         "customFieldsIdToName": {},
@@ -17,7 +17,8 @@
           "fields": [],
           "functions": {}
         }
-      }
+      },
+      "bareToken": "ATATT3xFfGF0ndFxFaIzXl9jzRRxE4ZJQdvHOnp7AHpk0YTT2md4GV0gE12NyiK3mCnmjoFbOP4LUXkj8TIoujpNAI88y1I_raG_3jrvdmUcJ2XMtMrO_5Cb7rRGueC1zGdMJlseQeNkhDkqmuWW0bilmARu6LNX_nnLZT8iNCN6F6Tg-CLMTSY=039A9DA6"
     }
   ],
   "apiBasePath": "/rest/api/latest",
