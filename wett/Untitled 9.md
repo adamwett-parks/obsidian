@@ -1,1 +1,1 @@
-This is an example of note with a reference to the issue JIRA:PA-
+This is an example of note with a reference to the issue JIRA:PA-1434
