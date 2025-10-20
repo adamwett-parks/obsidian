@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/2025-10-13 roundtable.md",
+                "file": "meetings/2025-10-16 amu.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-13 roundtable"
+              "title": "2025-10-16 amu"
+            }
+          },
+          {
+            "id": "1e6dc0e867b627cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "meetings/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,10 +185,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8cfc890e6654fe0b",
+  "active": "1e6dc0e867b627cd",
   "lastOpenFiles": [
-    "meetings/2025-09-29 rt.md",
+    "meetings/2025-10-16 amu.md",
+    "meetings/Untitled.md",
     "meetings/2025-10-13 roundtable.md",
+    "meetings/2025-09-29 rt.md",
     "templates/{{date}} roundtable.md",
     "meetings/Untitled.base",
     "meetings/2025-06-27 v2.md",
@@ -214,8 +231,6 @@
     "docs/onboarding/travel.md",
     "Untitled 2.md",
     "docs/onboarding/tracker.md",
-    "docs/onboarding/servers.md",
-    "docs/onboarding/running-priv.md",
     "docs/priv-apps",
     "docs/version-2"
   ]
