@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/Untitled.md",
+                "file": "meetings/2025-10-20 rt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "2025-10-20 rt"
             }
           }
         ],
@@ -188,7 +188,7 @@
   "active": "1e6dc0e867b627cd",
   "lastOpenFiles": [
     "meetings/2025-10-16 amu.md",
-    "meetings/Untitled.md",
+    "meetings/2025-10-20 rt.md",
     "meetings/2025-10-13 roundtable.md",
     "meetings/2025-09-29 rt.md",
     "templates/{{date}} roundtable.md",
