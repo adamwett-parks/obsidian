@@ -1,0 +1,32 @@
+Testing:
+- User with no access (Amoroso)
+	- [ ] cannot see any requests
+- Cashier level access to multiple units (Fuller)
+	- [ ] can see requests for all units they are assigned to
+	- [ ] cannot do any approvals
+	- [ ] Can edit/delete requests that they created that don’t have any approval yet
+- Manager level access (Hembree3458)
+	- [ ] can see requests for all units they are assigned to
+	- [ ] can do manager approvals
+	- [ ] manager approval for requests under 1000$ get final approval
+	- [ ] manager denial gives final denial
+	- [ ] cannot do approval on denied requests
+	- [ ] Can edit/delete requests for units they manage or requests they created
+- District + additional unit access with cashier permissions (avis with admn added)
+	- [ ] can see requests for all units they are assigned to
+	- [ ] can do district approvals for NWDI units
+	- [ ] cannot do approvals for ADMN unit
+	- [ ] district approval for requests under 1000$ get final approval
+	- [ ] district approval for request 1000-2500 does not give final approval
+	- [ ] district approval for request 1000-2500 with manager approval gets final approval 
+	- [ ] Can edit/delete requests for units they manage or requests they created
+- Section level access (shimel)
+	- [ ] can see requests for all units they are assigned to (which is all units)
+	- [ ] can do section approvals for all units
+	- [ ] cannot only do manager/district approval for units they are in the CHP for
+	- [ ] section approval for requests under 1000$ get final approval
+	- [ ] section approval for request 1000-2500 does not give final approval
+	- [ ] section approval for request 1000-2500 with manager approval gets final approval 
+	- [ ] section approval for request 2500+ does not get final approval
+	- [ ] section approval for request 2500+ with disu and manager approval gets final approval
+	- [ ] Can edit/delete requests for units they are a manager for in the CHP or requests they created

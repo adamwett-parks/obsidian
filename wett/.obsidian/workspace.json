@@ -185,10 +185,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e6dc0e867b627cd",
+  "active": "fdebb51981999327",
   "lastOpenFiles": [
-    "meetings/2025-10-16 amu.md",
     "meetings/2025-10-20 rt.md",
+    "conflict-files-obsidian-git.md",
+    "testing pa-1434.md",
+    "_stack.md",
+    "Untitled 9.md",
+    "Untitled 8.md",
+    "Untitled 7.md",
+    "meetings/2025-10-16 amu.md",
     "meetings/2025-10-13 roundtable.md",
     "meetings/2025-09-29 rt.md",
     "templates/{{date}} roundtable.md",
@@ -224,13 +230,7 @@
     "docs/sop",
     "Untitled 1",
     "meetings/2025-08-25 rt.md",
-    "meetings/2025-08-25 john.md",
     "output.docx",
-    "dev-guide.md",
-    "Untitled 3.md",
-    "docs/onboarding/travel.md",
-    "Untitled 2.md",
-    "docs/onboarding/tracker.md",
     "docs/priv-apps",
     "docs/version-2"
   ]
