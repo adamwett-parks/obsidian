@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/2025-10-20 rt.md",
+                "file": "meetings/2025-10-21 units.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-20 rt"
+              "title": "2025-10-21 units"
             }
           }
         ],
@@ -185,9 +185,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdebb51981999327",
+  "active": "1e6dc0e867b627cd",
   "lastOpenFiles": [
     "meetings/2025-10-20 rt.md",
+    "meetings/2025-10-21 units.md",
     "conflict-files-obsidian-git.md",
     "testing pa-1434.md",
     "_stack.md",
@@ -229,7 +230,6 @@
     "CleanShot 2025-08-28 at 07.10.14.png",
     "docs/sop",
     "Untitled 1",
-    "meetings/2025-08-25 rt.md",
     "output.docx",
     "docs/priv-apps",
     "docs/version-2"
