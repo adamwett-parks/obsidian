@@ -1,8 +1,11 @@
 ### Overview
-Backend runs in Docker, contains Slim (PHP) & MariaDB
+- Backend ()
+	- Slim (PHP)
+	- MariaDB
 - Frontend runs outside of Docker, contains client-side & server-side code
+	- Server side: All API calls,  
 	- Client side: interactive components (buttons, inputs, etc.)
-	- Server side: 
+
 ### Clone Repo
 - clone repo & switch to V2-167
 	- we should take the current state of main and make it a different branch
@@ -14,3 +17,5 @@ Backend runs in Docker, contains Slim (PHP) & MariaDB
 
 
 ### Installing Nodejs
+1. Download [Nodejs Installer](https://nodejs.org/en/download) (.msi file)
+2. 
