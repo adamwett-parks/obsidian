@@ -18,4 +18,6 @@
 
 ### Installing Nodejs
 1. Open a Terminal using Git Bash
-2. 
+2. `cd` into the root of the repo
+3. Run this script: `./install-node.sh`
+4. 
