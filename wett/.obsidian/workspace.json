@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "07d9eaf6721ac922",
+        "id": "00c810e9b3547d64",
         "type": "tabs",
         "children": [
           {
-            "id": "8cfc890e6654fe0b",
+            "id": "36061aa282858ea7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meetings/2025-10-16 amu.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-10-16 amu"
-            }
-          },
-          {
-            "id": "1e6dc0e867b627cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "meetings/2025-10-21 units.md",
+                "file": "logs/2025-10-30.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-21 units"
-            }
-          },
-          {
-            "id": "9aa0a401b29c65f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "V2 Dev Guide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "V2 Dev Guide"
+              "title": "2025-10-30"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0f0986c084d637c5",
@@ -179,8 +151,19 @@
               "icon": "lucide-list",
               "title": "Outline of roundtable 2025-07-07"
             }
+          },
+          {
+            "id": "b96e84e26bc4997e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -199,39 +182,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9aa0a401b29c65f7",
+  "active": "36061aa282858ea7",
   "lastOpenFiles": [
-    "V2 Dev Guide.md",
+    "Untitled 9.md",
+    "logs/2025-10-30.md",
     "meetings/2025-10-21 units.md",
     "meetings/2025-10-20 rt.md",
-    "conflict-files-obsidian-git.md",
-    "testing pa-1434.md",
-    "_stack.md",
-    "Untitled 9.md",
-    "Untitled 8.md",
-    "Untitled 7.md",
     "meetings/2025-10-16 amu.md",
-    "meetings/2025-10-13 roundtable.md",
-    "meetings/2025-09-29 rt.md",
-    "templates/{{date}} roundtable.md",
-    "meetings/Untitled.base",
-    "meetings/2025-06-27 v2.md",
-    "logs/2025-09-25.md",
-    "templates",
+    "V2 Dev Guide.md",
+    "Untitled 7.md",
+    "Untitled 8.md",
+    "_stack.md",
     "logs/2025-10-08.md",
-    "atoms/separated employees.md",
+    "testing pa-1434.md",
+    "templates/{{date}} roundtable.md",
+    "templates",
+    "meetings/2025-10-13 roundtable.md",
+    "about-me.md",
     "atoms/git cheatsheet.md",
+    "logs/2025-09-25.md",
+    "atoms/separated employees.md",
+    "icarus.md",
     "atoms",
     "Untitled 6.md",
+    "meetings/2025-09-30 parkalerts.md",
+    "meetings/2025-09-29 rt.md",
+    "logs/2025-09-30.md",
     "Legacy Manifesto.md",
     "Untitled 5.md",
     "logs",
     "sinus.md",
     "docs/sop/Code Review SOP.md",
     "Pasted image 20250828070010.png",
-    "timesheet/2025-08-28 timesheet.md",
-    "Untitled 4.md",
-    "meetings/2025-08-28 parkalerts.md",
     "Pasted image 20250828070949.png",
     "Pasted image 20250828070436.png",
     "Pasted image 20250828070218.png",
@@ -246,6 +228,7 @@
     "Untitled 1",
     "output.docx",
     "docs/priv-apps",
-    "docs/version-2"
+    "docs/version-2",
+    "docs/passport"
   ]
 }
