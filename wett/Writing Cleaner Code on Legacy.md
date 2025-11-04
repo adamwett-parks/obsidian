@@ -390,4 +390,26 @@ Now navigate to the page via the GUI flow, the same way a user logging into the 
 ]
 ```
 
-This doesn't look very helpful at first. But there's probably a reason that `exit` statement is there. There's two forms on the page right now, one for parkcodes (from `menu.php`) and one that says "(This unit as NOT been named.)". Let's fill out the form included at the top in `menu.php`. There's a dropdown for park codes, I'm going to select CRMO. The page reloads and now we see:
+This doesn't look very helpful at first. But there's probably a reason that `exit` statement is there. There's two dropdowns on the page right now. One says "Select a Park" and the other says "Select a Unit"
+
+Selecting a park reloads the page. After we have selected a park our console reads:
+
+```json
+[ 
+	"CRMO", 
+	null
+]
+[
+    null,
+    null
+]
+```
+
+Great! Now we know where `$park_code` comes from! Let's define it right below the extract.
+
+```php
+// Request Parameters
+extract($_REQUEST);
+$park_code = $_REQUEST['park_code'];
+```
+
