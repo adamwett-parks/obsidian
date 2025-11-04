@@ -720,10 +720,14 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - Functions
 	- Pieces of business logic used on the page
 	- HTML components
-- POST Handlers
-	- Functions to handle different actions the page can perform (usually )
-- SQL section
+- Actions
+	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
+	- Control flow to execute the correct action & maybe `die()` afterwards
+- Queries
 	- Function to compose a `WHERE` clause
 	- Function to execute a `SELECT` statement
-	- Actually run the SQL query
-- 
+	- Actually run the main SQL query for the page to use
+- UI Components
+	- Functions that render HTML, especially conditionally or with 
+- HTML
+	- The main body of the page, commonly a big table 
