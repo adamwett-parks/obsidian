@@ -318,6 +318,8 @@ echo "
 ?>
 ```
 
+Before we make any code changes, let's 
+
 Let's define a new term: "missing variables"
 
 > **"Missing variable"**
@@ -349,13 +351,26 @@ Since the include to `globalFunctions` and the call to `logFileAccess`  don't de
 
 Our first two missing variables are `$park_code` and `$unit_id`. Logically, if they are not defined in `menu.php`, the are set via `extract($_REQUEST)`. A quick `Ctrl+F` search in `menu.php` shows that they aren't set here. `menu.php` includes `_base_top_fire.php` and they aren't set here either, so most likely they are extracted from the request.
 
-Let's write a simple test to confirm out hypothesis:
+In this case, the chain of `include` statements was short and easy to follow. This might not always be the case. We can write a simple test to identify exactly where they are coming from.
 
 ```php
 include("menu.php");
+// see if the missing variables exist before extracting the request
 $menu_park_code = $park_code;
-$menu_unit_id
+$menu_unit_id = $unit_id
+// log to the browser console
+\Utils\Logging::consolejson([$menu_park_code, $menu_unit_id]);
+
 
 extract($_REQUEST);
+// see if these come from the request
+$req_park_code = $_REQUEST['park_code'];
+$req_park_code = $_REQUEST['unit_id'];
+// log to the browser console
+\Utils\Logging::consolejson([$req_park_code, $req_unit_id]);
+
+// exit early to prevent the page from doing anything
+exit();
+
 if(empty($park_code) AND empty($unit_id)){exit;}
 ```
