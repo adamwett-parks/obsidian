@@ -889,13 +889,19 @@ function getPrescriptions($connection, $park_code, $unit_id) {
 // =============================== State ============================
 
 $prescriptions = getPrescriptions($connection, $park_code, $unit_id);
-$prescriptions_names = array_map(function ($row))
+
+$prescription_names = array_map(function ($row) {
+    return $row['file_name'];
+}, $prescriptions);
 
 ```
 
-1. I moved the state into the state section
-2. I turned the query into function
-3. Removed redundant control flow
+1. I turned the query into function
+2. Removed redundant control flow
+3. Call the function and store the result in the state section
+4. Use `array_map` to get a single column from each row
 
 `\Utils\SQL::fetchAll($result)` takes a result from a query and iterates on it, fetching all the rows. It throws an error if it fails.
+
+`array_map` applies a callback to each element of the input array, and appends the result to the output array.
 
