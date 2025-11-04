@@ -707,11 +707,9 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 	- include statements
 	- request parameters
 	- session variables
-	- anything else that happens outside of the file that affects it
-- State
-	- database connection
 	- gateway classes
-	- semantic variables
+	- database connection
+	- anything else that happens outside of the file that affects it
 - Access
 	- Use state to determine if someone has access to the page or if the rest of the page should render. Common checks include:
 		- is our `$level` high enough?
@@ -720,6 +718,9 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - Functions
 	- Pieces of business logic
 	- Small SQL queries that run before the main query
+- State
+	- semantic variables
+	- results from calling functions
 - Actions/Handlers
 	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
 	- Control flow to execute the correct action & maybe `die()` afterwards if it's a POST request.
@@ -737,9 +738,10 @@ I'm going to add single-line comments that span >120 characters to clearly separ
 ```php
 // =============================== Dependencies ============================
 
-// =============================== State ===================================
-
 // =============================== Access ==================================
+
+// =============================== Functions ===============================
+
 
 // etc.
 ```
@@ -863,9 +865,12 @@ if (!empty($unit_id)) {
 We turn it into this:
 
 ```php
-// =============================== State ============================
+// =============================== Access ===========================
 
-$prescriptions = null;
+// Only show the page if we've selected a park and a burn unit.
+if (!$park_code and !$unit_id) exit();
+
+
 
 // =============================== Functions ========================
 
@@ -881,16 +886,16 @@ function getPrescriptions($connection, $park_code, $unit_id) {
 	return \Utils\SQL::fetchAll($result);
 }
 
-// Fetch prescription info
-if ($park_code && $unit_id) {
-	$prescriptions = getPrescriptions($connection, $park_code, $unit_id);
-}
+// =============================== State ============================
+
+$prescriptions = getPrescriptions($connection, $park_code, $unit_id);
+$prescriptions_names = array_map(function ($row))
 
 ```
 
 1. I moved the state into the state section
 2. I turned the query into function
-3. I moved the control flow outside of the function
+3. Removed redundant control flow
 
-`\Utils\SQL::fetchAll($result)` takes a result from a query and iterates on it, fetching all the rows. It throws an error if it fails. Note that the check for our params is redundant but will 
+`\Utils\SQL::fetchAll($result)` takes a result from a query and iterates on it, fetching all the rows. It throws an error if it fails.
 
