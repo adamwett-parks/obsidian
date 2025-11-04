@@ -631,9 +631,12 @@ $emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
 
 ```
 
-Now we are fairly confident that we have all our request parameters. 
+---
 
-#### "OK, cool. But why? What does that do for us?"
+You might be asking: "OK, cool. But why? What does all this do for us?"
+
+First and foremost, it lets us look in a single place and asee 
+
 Lots of pages check for missing values and might even set them in the same line. Remember the output from our first time we logged to the console?
 
 ```json
@@ -667,3 +670,9 @@ This pattern is really common across the codebase. If we move all of these undef
 if ($unit_id) {
 ```
 
+
+---
+
+One last place we can check for missing variables is any places in the codebase that navigate to our file. This one can be pretty tricky if the file you're working on is referenced by a lot of other files, but in this case `burn_history.php` only appears 11 times in the codebase, and all of the parameters added are ones we've defined already.
+
+Now we can be fairly confident that we have MOST
