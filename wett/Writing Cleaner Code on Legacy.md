@@ -318,6 +318,29 @@ echo "
 ?>
 ```
 
-Our thing to look at will be the top of the file, specifically `extract` and `include` statements. Our goal here is to not *directly* target getting rid of these (at first), but to be aware of where any variables we use in this file without explicitly defining them come from.
+Let's define a term
 
-Explicitly defining these variables is 
+Our thing to look at will be the top of the file, specifically `extract` and `include` statements. Our goal here is to not *directly* target getting rid of these (at first), but to be aware of where any variables we use in this file without explicitly defining them come from. 
+
+
+
+Explicitly defining these variables is useful because it gives our IDE intellisense on where they are coming from.
+
+The first chunk to address is this:
+
+```php
+<?php
+//added global functions that are useful in every php file
+include_once($_SERVER['DOCUMENT_ROOT'].'/php_functions/globalFunctions.php');
+//PA-537 log the file, user, and parent file
+logFileAccess(__FILE__);
+
+include("menu.php");
+
+extract($_REQUEST);
+if(empty($park_code) AND empty($unit_id)){exit;}
+```
+
+Since the include to `globalFunctions` and the call to `logFileAccess`  don't define any variables, they are of little interest to us.
+
+We have two "missing" variables 
