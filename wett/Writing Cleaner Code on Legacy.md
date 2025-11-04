@@ -374,14 +374,20 @@ $req_park_code = $_REQUEST['unit_id'];
 // log to the browser console
 \Utils\Logging::consolejson([$req_park_code, $req_unit_id]);
 
-// exit early to prevent the page from doing anything
-exit();
-
 if(empty($park_code) AND empty($unit_id)){exit;}
 ```
 
 Now navigate to the page via the GUI flow, the same way a user logging into the application would. Looking at the console we see:
 
 ```json
-
+[
+    "",
+    null
+]
+[
+    null,
+    null
+]
 ```
+
+This doesn't look very helpful at first. But there's probably a reason that `exit` statement is there. There's two forms on the page right now, one for parkcodes (from `menu.php`) and one that says "(This unit as NOT been named.)". Let's fill out the form included at the top in `menu.php`. There's a dropdown for park codes, I'm going to select CRMO. The page reloads and now we see:
