@@ -883,12 +883,14 @@ function getPrescriptions($connection, $park_code, $unit_id) {
 
 // Fetch prescription info
 if ($park_code && $unit_id) {
-	$prescriptions = getPrescriptions($park_code, $unit_id);
+	$prescriptions = getPrescriptions($connection, $park_code, $unit_id);
 }
 
 ```
 
 1. I moved the state into the state section
-2. I turned the query into (mostly) *pure function*
+2. I turned the query into function
 3. I moved the control flow outside of the function
-4. 
+
+`\Utils\SQL::fetchAll($result)` takes a result from a query and iterates on it, fetching all the rows. It throws an error if it fails. Note that the check for our params is redundant but will 
+
