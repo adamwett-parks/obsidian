@@ -370,7 +370,7 @@ $menu_unit_id = $unit_id;
 // see if these come from the request
 extract($_REQUEST);
 $req_park_code = $_REQUEST['park_code'];
-$req_park_code = $_REQUEST['unit_id'];
+$req_unit_id = $_REQUEST['unit_id'];
 // log to the browser console
 \Utils\Logging::consolejson([$req_park_code, $req_unit_id]);
 
@@ -400,12 +400,12 @@ Selecting a park reloads the page. After we have selected a park our console rea
 	null
 ]
 [
-    null,
+    "CRMO", 
     null
 ]
 ```
 
-Great! Now we know where `$park_code` comes from! Let's define it right below the extract.
+Great! `$park_code` is defined in the request, but also in `menu.php`. However we will pick the request as our *single source of truth* since our extract statement comes after our include. No matter what `menu.php` says `$park_code` is, if our request contains `park_code=` Let's define it right below the extract.
 
 ```php
 // Request Parameters
@@ -417,7 +417,9 @@ We need that `isset` because when we visited the page at first, that request par
 
 Now that our variable is defined, we can right click it and select "Find all References" from the context menu. This should open a buffer that shows everywhere in this file that this variable is used. If we are ever unsure if a variable has been defined or not, we can right click it and select "Find Definition" to bring us to where we defined it.
 
-*This won't work as intended right now, since there are statements that redefine it later in the file, but it will serve useful once we clean those*
+"Find Definition" won't work as intended right now, since there are statements that redefine it later in the file, but it will serve useful once we clean those up, and help us find the places where we are redefining it.
+
+
 
 
 
