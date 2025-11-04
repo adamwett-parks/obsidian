@@ -318,7 +318,11 @@ echo "
 ?>
 ```
 
-Before we make any code changes, let's 
+### 1 - Formatting
+
+Before we make any code changes, let's format the file correctly with our IDE and make a commit for that. This way it will be easier to read and make it clear what changes we've made that aren't just automatic formatting changes. To format, I have the Intellephense extension. If you choose to use a PHP extension like Intellephense, you can usually set a target PHP version. Since we are running 5.6, this is useful to warn us when we newer features like `??` or `str_contains` that are incompatible with our production environment.
+
+If you aren't sure how to set up a formatter or a PHP extension, that is not a requirement for following along in this tutorial, but I highly recommend you use these tools when working in legacy as they really do make your life easier.
 
 Let's define a new term: "missing variables"
 
