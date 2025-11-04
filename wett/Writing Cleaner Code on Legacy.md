@@ -718,15 +718,15 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 		- do we have the correct request params?
 		- we might need to make a specific query, like checking if we are a Budget Officer or a DISU. is the result OK?
 - Functions
-	- Pieces of business logic used on the page
-	- HTML components
+	- Pieces of business logic
+	- Small SQL queries that run before the main query
 - Actions/Handlers
 	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
 	- Control flow to execute the correct action & maybe `die()` afterwards if it's a POST request.
-- Data Fetching
+- Main Query
 	- Function to compose a `WHERE` clause
 	- Function to execute a `SELECT` statement
-	- Actually run the main SQL query for the page to use
+	- Control flow to actually run the main SQL query for the page to use
 - UI Components
 	- Functions that render HTML, especially conditionally or injecting "props" into them
 - HTML
@@ -867,16 +867,20 @@ We turn it into this:
 
 $prescriptions = null;
 
-// =============================== SQL ==============================
+// =============================== Functions ========================
 
-// Fetch prescription info
-if ($park_code && $unit_id) {
+function getPrescriptions() {
 	$sql = "SELECT *
 			FROM prescriptions
 			WHERE park_code='$park_code' AND unit_id='$unit_id'
 			ORDER BY id";
-	$result = 
-	$prescriptions = \Utils\SQL::fetchAll()
+	$result = $connection->query($sql);
+	return \Utils\SQL::fetchAll($result);
 }
 
+// Fetch prescription info
+if ($park_code && $unit_id) $prescriptions = getPrescriptions();
+
 ```
+
+1. I moved th
