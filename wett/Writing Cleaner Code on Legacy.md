@@ -635,9 +635,9 @@ $emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
 
 You might be asking: "OK, cool. But why? What does all this do for us?"
 
-First and foremost, it lets us look in a single place and asee 
+First and foremost, it lets us look in a single place and see all of the parameters and session variables that a file uses.
 
-Lots of pages check for missing values and might even set them in the same line. Remember the output from our first time we logged to the console?
+Additionally, lots of files check for missing values and might even set them in the same line. Remember the output from our first time we logged to the console?
 
 ```json
 [
@@ -675,4 +675,28 @@ if ($unit_id) {
 
 One last place we can check for missing variables is any places in the codebase that navigate to our file. This one can be pretty tricky if the file you're working on is referenced by a lot of other files, but in this case `burn_history.php` only appears 11 times in the codebase, and all of the parameters added are ones we've defined already.
 
-Now we can be fairly confident that we have MOST
+Now we can be fairly confident that we have MOST of the missing variables explicitly defined. We should still keep the `extract` statement just in case we missed anything.
+
+Here's our final result:
+
+```php
+// Request Parameters
+extract($_REQUEST);
+$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
+$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
+$history_id = isset($_REQUEST['history_id']) ? $_REQUEST['history_id'] : null;
+$del = isset($_REQUEST['del']) ? $_REQUEST['del'] : null;
+$submit = isset($_REQUEST['submit']) ? $_REQUEST['submit'] : null;
+$file = isset($_REQUEST['file']) ? $_REQUEST['file'] : null;
+
+// Session Info
+$level = isset($_SESSION['fire']['level']) ? $_SESSION['fire']['level'] : null;
+$tempID = isset($_SESSION['fire']['tempID']) ? $_SESSION['fire']['tempID'] : null;
+$emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
+
+\Utils\Logging::consolejson(["file" => $file]);
+```
+
+## 3 - Structuring our file
+
+To make our file more readable, we should create a deliberate high level structure for it.
