@@ -861,3 +861,22 @@ if (!empty($unit_id)) {
 ```
 
 We turn it into this:
+
+```php
+// =============================== State ============================
+
+$prescriptions = null;
+
+// =============================== SQL ==============================
+
+// Fetch prescription info
+if ($park_code && $unit_id) {
+	$sql = "SELECT *
+			FROM prescriptions
+			WHERE park_code='$park_code' AND unit_id='$unit_id'
+			ORDER BY id";
+	$result = 
+	$prescriptions = \Utils\SQL::fetchAll()
+}
+
+```
