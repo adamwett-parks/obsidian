@@ -888,16 +888,17 @@ function getPrescriptions($connection, $park_code, $unit_id) {
 
 // =============================== State ============================
 
-$prescriptions = getPrescriptions($connection, $park_code, $unit_id);
+$prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_code, $unit_id) : [];
 
 $prescription_names = array_map(function ($row) {
     return $row['file_name'];
 }, $prescriptions);
+}
 
 ```
 
 1. I turned the query into function
-2. Removed redundant control flow
+2. Moved the control flow outside the function and into the state
 3. Call the function and store the result in the state section
 4. Use `array_map` to get a single column from each row
 
