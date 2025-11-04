@@ -547,8 +547,12 @@ href='$del_link'
 Looking at #2
 
 ```php
+foreach
+
 @$link = $ARRAY_prescription[$value];
 echo "&nbsp;&nbsp;&nbsp;View Prescription: <a href='/fire/$link' target='_blank'>$name</a>
 ```
 
-We need to be careful here. Your first instinct might to be to look into how `$ARRAY_prescription` is defined. This is a bad idea, because it will send you down a rabbit hole and increase your scope. Our target now is looking for parameters that are reused across the page. This is only used in one place, and we know that because 
+We need to be careful here. Your first instinct might to be to look into how `$ARRAY_prescription` is defined. This is a bad idea, because it will send you down a rabbit hole and increase your scope. Our target now is looking for parameters that are reused across the page. This is only used in one place, and we know that because it's accessing an array value inside of a `foreach` loop. We can ignore it for now.
+
+For #3 
