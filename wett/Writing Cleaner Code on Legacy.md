@@ -621,4 +621,44 @@ $file = isset($_REQUEST['file']) ? $_REQUEST['file'] : null;
 \Utils\Logging::consolejson(["file" => $file]);
 ```
 
-Another target for missing variables is `$_SESSION`, this page doesn't use any, but the process is si
+Another target for missing variables is `$_SESSION`, this page doesn't use any, but `menu.php` does. The process for this is even easier. Just `Ctrl+F` for `$_SESSION` and move all the accesses to the top. Make sure you do so safely!
+
+```php
+// Session Info
+$level = isset($_SESSION['fire']['level']) ? $_SESSION['fire']['level'] : null;
+$tempID = isset($_SESSION['fire']['tempID']) ? $_SESSION['fire']['tempID'] : null;
+$emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
+
+```
+
+Now we are fairly confident that we have all our request parameters. 
+
+#### "OK, cool. But why? What does that do for us?"
+This page isn't a good example, but lots of pages check for missing values and might even set them in the same line. Remember the output from our first time we logged to the console?
+
+```json
+[
+	"menu"
+    "", // park_code
+    null
+]
+[
+	"request"
+    null, // park_code
+    null
+]
+```
+
+Well inside of `menu.php` there is this line:
+
+```php
+if(empty($park_code)){$park_code="";}
+```
+
+Another example is this
+
+```php
+
+```
+
+This pattern is really common across the codebase. If we move all of these checks to the top of the file we can avoid 
