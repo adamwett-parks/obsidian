@@ -795,7 +795,7 @@ $table_1 = "burn_history";
 $table_2 = "units";
 ```
 
-Here's the definition for `\Utils\SQL::getConnection($db)`:
+Here's the definition for `\Utils\SQL::getConnection($db)`. In case you've never seen it before it returns a database connection and prevents any included variables from messing with `iConnect.inc`. We'll get back to how I'm able to use it in this file without directly referencing it with `include` but for know just know that the `include` for `globalFunctions.php` handles that for us.
 
 ```php
 public static function getConnection($db)
@@ -806,4 +806,20 @@ public static function getConnection($db)
 }
 ```
 
-It returns a database connection and prevents any included variables from messing with `iConnect.inc`. 
+Moving on to the next chunk:
+
+```php
+if (!empty($history_id) and @$del == "delete") {
+    $sql = "Delete
+	from $table_1
+	where history_id='$history_id'
+	";  //echo "$sql"; exit;
+    $result = mysqli_query($connection, $sql) or die("Couldn't execute select query. $sql");
+}
+```
+
+What does this do, and why? When will it do it?
+
+- What: deletes a row
+- Why: the user asked to do so
+- When: `$history_id` is set and `$del` is `"delete"`
