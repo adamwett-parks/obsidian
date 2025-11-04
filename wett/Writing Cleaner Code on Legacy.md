@@ -824,7 +824,7 @@ What does this do, and why? When will it do it?
 - Why: the user asked to do so
 - When: `$history_id` is set and `$del` is `"delete"`
 
-This would be a good thing to move into the actions section. We will clean it up later but for now we will just copy & paste it as is and add a comment.
+This would be a good thing to move into the actions section. We will clean it up more later but for now we will just copy & paste it as is, indent it some, and add a comment.
 
 > **Note:** cleaning something like this up isn't entirely necessary. It works as is, is decently clear what it does, and is easily modifiable. Cleaning it up will mostly make it look nicer. Just make sure you move it to the right spot & add a comment to make it easier to locate.
 
@@ -832,6 +832,32 @@ This would be a good thing to move into the actions section. We will clean it up
 // =============================== Actions ==================================
 
 // Handle deleting a record
-if ($history_id and $del == 'delete')
+if ($history_id and $del == 'delete') {
+	$sql = "DELETE 
+			FROM $table1 
+			WHERE history_id='$history_id'";
+	$result = $connection->query($sql) or die("Couldn't execute query. $sql");
+}
 
 ```
+
+I'm not going to do into gross detail about every chunk I refactor, but for some I will highlight what I'm doing if it's novel.
+
+For this chunk:
+
+```php
+if (!empty($unit_id)) {
+    $sql = "SELECT *
+	from prescriptions
+	where park_code='$park_code' and unit_id='$unit_id'
+	order by id";
+    $result = mysqli_query($connection, $sql) or die("Couldn't execute select query. $sql ");
+    while ($row = mysqli_fetch_assoc($result)) {
+        $ARRAY_prescription[$row['id']] = $row['unit_prescription'];
+        $ARRAY_prescription_name[$row['id']] = $row['file_name'];
+    }
+    //	echo "<pre>"; print_r($ARRAY_prescription_name); echo "</pre>"; // exit;
+}
+```
+
+We turn it into this:
