@@ -447,8 +447,8 @@ include("menu.php");
 
 // Request Parameters
 extract($_REQUEST);
-$park_code = $_REQUEST['park_code'];
-$unit_id = $_REQUEST['unit_id'];
+$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
+$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
 
 if(empty($park_code) AND empty($unit_id)){exit;}
 
@@ -458,7 +458,7 @@ $table_2 = "units";
 
 Refreshing the page and playing around with the forms gives us the same behavior as before, so everything's peachy.
 
-A few lines down we see another missing variable `history_id` lets `Ctrl+F` it on the page and see if we can locate where it might be defined.
+A few lines down we see another missing variable `history_id` lets `Ctrl+F` for `history_id=` on the page and see if we can locate where it might be defined.
 
 ```php
 foreach ($ARRAY_history as $index => $array) {
@@ -469,8 +469,36 @@ foreach ($ARRAY_history as $index => $array) {
 }
 ```
 
-Gotcha! `$history_id` is set via a form in this file. Let's de 
+Gotcha! `$history_id` is set via a form in this file, so it will be a request parameter. Let's define it:
 
+```php
+// Request Parameters
+extract($_REQUEST);
+$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
+$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
+$history_id = isset($_REQUEST['history_id']) ? $_REQUEST['history_id'] : null;
+```
+
+Moving on to `$del`:
+
+```php
+if (!empty($history_id) and @$del == "delete") {
+
+// Ctrl+F 'del='
+
+echo "<tr><td><a href='burn_history.php?park_code=$park_code&history_id=$history_id&del=delete' onclick=\"return confirm('Are you sure you want this Burn History?')\">Delete</a></td></tr>";
+```
+
+Add it to the top:
+
+```php
+// Request Parameters
+extract($_REQUEST);
+$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
+$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
+$history_id = isset($_REQUEST['history_id']) ? $_REQUEST['history_id'] : null;
+$del = isset($_REQUEST['del']) ? $_REQUEST['del'] : null;
+```
 
 
 
