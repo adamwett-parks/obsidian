@@ -703,17 +703,23 @@ Humans are wired for spatial awareness. Placing things in a consistent spot make
 
 This is a structure that I have found to be quite helpful. It doesn't have to be followed to a T for all pages, but it is loose enough so that you can probably adapt it in a way that makes sense for your page
 
-- Hooks section
-	- global functions
+- Hooks
+	- include statements
 	- request parameters
 	- session variables
-	- anything else that happens outside of the page that affects it
+	- anything else that happens outside of the file that affects it
 - State
+	- database connection
 	- variables dependent on our hooks
 - Access
-	- Use the state to determine if someone has access to the page or if the rest of the page should render
+	- Use state to determine if someone has access to the page or if the rest of the page should render. Re
 		- is their `$level` high enough?
 		- do we have all the request params we need?
+		- do we need to make a specific query?
 - Functions
-- Query section
-	- Use the state an hooks to 
+	- Pieces of business logic used on the page
+	- HTML components
+- SQL section
+	- Function to compose a `WHERE` clause
+	- Function to execute a `SELECT` statement
+- 
