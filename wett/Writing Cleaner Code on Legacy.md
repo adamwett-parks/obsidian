@@ -720,7 +720,7 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - Functions
 	- Pieces of business logic used on the page
 	- HTML components
-- Handlers
+- Actions/Handlers
 	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
 	- Control flow to execute the correct action & maybe `die()` afterwards if it's a POST request.
 - Data Fetching
@@ -823,3 +823,15 @@ What does this do, and why? When will it do it?
 - What: deletes a row
 - Why: the user asked to do so
 - When: `$history_id` is set and `$del` is `"delete"`
+
+This would be a good thing to move into the actions section. We will clean it up later but for now we will just copy & paste it as is and add a comment.
+
+> **Note:** cleaning something like this up isn't entirely necessary. It works as is, is decently clear what it does, and is easily modifiable. Cleaning it up will mostly make it look nicer. Just make sure you move it to the right spot & add a comment to make it easier to locate.
+
+```php
+// =============================== Actions ==================================
+
+// Handle deleting a record
+if ($history_id and $del == 'delete')
+
+```
