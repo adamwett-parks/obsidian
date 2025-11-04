@@ -326,13 +326,9 @@ Let's define a new term: "missing variables"
 > - defined in another file and brought into scope with `include`
 > - defined in an `extract` statement
 
-Our first goal will be to eliminate all missing variables, that is, explicity defining them so our IDE is aware of where they come from. Intellisense is your friend.
+Our first goal will be to eliminate all missing variables, that is, explicit defining them so our IDE is aware of where they come from. Intellisense is your friend.
 
-Our first thing to examine will be the top of the file, since most missing variables will be bought into scope here. 
-
-
-
-Explicitly defining these variables is useful because it gives our IDE intellisense on where they are coming from.
+Most of the missing variables will originate at the top of the file.
 
 The first chunk to address is this:
 
@@ -351,4 +347,15 @@ if(empty($park_code) AND empty($unit_id)){exit;}
 
 Since the include to `globalFunctions` and the call to `logFileAccess`  don't define any variables, they are of little interest to us.
 
-We have two "missing" variables 
+Our first two missing variables are `$park_code` and `$unit_id`. Logically, if they are not defined in `menu.php`, the are set via `extract($_REQUEST)`. A quick `Ctrl+F` search in `menu.php` shows that they aren't set here. `menu.php` includes `_base_top_fire.php` and they aren't set here either, so most likely they are extracted from the request.
+
+Let's write a simple test to confirm out hypothesis:
+
+```php
+include("menu.php");
+$menu_park_code = $park_code;
+$menu_unit_id
+
+extract($_REQUEST);
+if(empty($park_code) AND empty($unit_id)){exit;}
+```
