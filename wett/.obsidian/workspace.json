@@ -8,20 +8,37 @@
         "type": "tabs",
         "children": [
           {
-            "id": "36061aa282858ea7",
+            "id": "3f22a2ea89757adf",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-11-04.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "2025-11-04"
+            }
+          },
+          {
+            "id": "f80c578c144b95fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "logs/2025-10-30.md",
+                "file": "Gateway Classes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-30"
+              "title": "Gateway Classes"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,11 +199,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "36061aa282858ea7",
+  "active": "f80c578c144b95fe",
   "lastOpenFiles": [
+    "Gateway Classes.md",
+    "2025-11-04.md",
+    "Untitled.base",
+    "logs/2025-10-30.md",
     "meetings/2025-11-03 rt.md",
     "Untitled 9.md",
-    "logs/2025-10-30.md",
     "meetings/2025-10-21 units.md",
     "meetings/2025-10-20 rt.md",
     "meetings/2025-10-16 amu.md",
@@ -210,9 +230,7 @@
     "meetings/2025-09-29 rt.md",
     "logs/2025-09-30.md",
     "Legacy Manifesto.md",
-    "Untitled 5.md",
     "logs",
-    "sinus.md",
     "Pasted image 20250828070010.png",
     "Pasted image 20250828070949.png",
     "Pasted image 20250828070436.png",
@@ -228,7 +246,6 @@
     "Untitled 1",
     "output.docx",
     "docs/priv-apps",
-    "docs/version-2",
-    "docs/passport"
+    "docs/version-2"
   ]
 }
