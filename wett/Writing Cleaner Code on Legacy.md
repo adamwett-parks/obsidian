@@ -318,9 +318,17 @@ echo "
 ?>
 ```
 
-Let's define a term
+Let's define a new term: "missing variables"
 
-Our thing to look at will be the top of the file, specifically `extract` and `include` statements. Our goal here is to not *directly* target getting rid of these (at first), but to be aware of where any variables we use in this file without explicitly defining them come from. 
+> **"Missing variable"**
+> 
+> A *missing variable* is a variable used in a file that is not explicitly defined. In most cases they are either:
+> - defined in another file and brought into scope with `include`
+> - defined in an `extract` statement
+
+Our first goal will be to eliminate all missing variables, that is, explicity defining them so our IDE is aware of where they come from. Intellisense is your friend.
+
+Our first thing to examine will be the top of the file, since most missing variables will be bought into scope here. 
 
 
 
