@@ -869,7 +869,10 @@ $prescriptions = null;
 
 // =============================== Functions ========================
 
-function getPrescriptions() {
+/**
+ * Gets all prescriptions
+ */
+function getPrescriptions($connection, $park_code, $unit_id) {
 	$sql = "SELECT *
 			FROM prescriptions
 			WHERE park_code='$park_code' AND unit_id='$unit_id'
@@ -879,8 +882,13 @@ function getPrescriptions() {
 }
 
 // Fetch prescription info
-if ($park_code && $unit_id) $prescriptions = getPrescriptions();
+if ($park_code && $unit_id) {
+	$prescriptions = getPrescriptions($park_code, $unit_id);
+}
 
 ```
 
-1. I moved th
+1. I moved the state into the state section
+2. I turned the query into (mostly) *pure function*
+3. I moved the control flow outside of the function
+4. 
