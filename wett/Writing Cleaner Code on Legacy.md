@@ -440,11 +440,25 @@ Next, let's open the second dropdown and select a unit. I'm going to pick "Centr
 ]
 ```
 
-Deducting the same way as before, we know that `$unit_id` is set in the request. Let's define it & get rid of our logging statements to clean up the console.
+Deducting the same way as before, we know that `$unit_id` is set in the request. Let's define it & get rid of our logging statements to clean up the console. We'll also add a comment above this section of the code
 
 ```php
+include("menu.php");
 
+// Request Parameters
+extract($_REQUEST);
+$park_code = $_REQUEST['park_code'];
+$unit_id = $_REQUEST['unit_id'];
+
+if(empty($park_code) AND empty($unit_id)){exit;}
+
+$table_1 = "burn_history";
+$table_2 = "units";
 ```
+
+Refreshing the page and playing around with the forms gives us the same behavior as before, so everything's peachy.
+
+
 
 
 
