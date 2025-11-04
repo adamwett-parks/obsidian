@@ -699,4 +699,21 @@ $emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
 
 ## 3 - Structuring our file
 
-To make our file more readable, we should create a deliberate high level structure for it.
+Humans are wired for spatial awareness. Placing things in a consistent spot makes them easier to find. We can leverage our biology to make our code easier to read and maintain by structuring it deliberately at a high level.
+
+This is a structure that I have found to be quite helpful. It doesn't have to be followed to a T for all pages, but it is loose enough so that you can probably adapt it in a way that makes sense for your page
+
+- Hooks section
+	- global functions
+	- request parameters
+	- session variables
+	- anything else that happens outside of the page that affects it
+- State
+	- variables dependent on our hooks
+- Access
+	- Use the state to determine if someone has access to the page or if the rest of the page should render
+		- is their `$level` high enough?
+		- do we have all the request params we need?
+- Functions
+- Query section
+	- Use the state an hooks to 
