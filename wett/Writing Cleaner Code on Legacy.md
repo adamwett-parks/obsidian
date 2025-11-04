@@ -701,7 +701,7 @@ $emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
 
 Humans are wired for spatial awareness. Placing things in a consistent spot makes them easier to find. We can leverage our biology to make our code easier to read and maintain by structuring it deliberately at a high level.
 
-This is a structure that I have found to be quite helpful. It doesn't have to be followed to a T for all pages, but it is loose enough so that you can probably adapt it in a way that makes sense for your page
+This is a structure that I have found to be quite helpful. It doesn't have to be followed to a T for all pages, but it is loose enough so that you can probably adapt it in a way that makes sense for your page.
 
 - Dependencies
 	- include statements
@@ -723,11 +723,23 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - Actions
 	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
 	- Control flow to execute the correct action & maybe `die()` afterwards
-- Queries
+- Data Fetching
 	- Function to compose a `WHERE` clause
 	- Function to execute a `SELECT` statement
 	- Actually run the main SQL query for the page to use
 - UI Components
-	- Functions that render HTML, especially conditionally or with 
+	- Functions that render HTML, especially conditionally or injecting "props" into them
 - HTML
-	- The main body of the page, commonly a big table 
+	- The main body of the page, commonly a big table
+
+I'm going to add single-line comments that span 160 characters to clearly separate the page into sections
+
+```php
+// ============================ Dependencies ================================
+
+// ================================ State ===================================
+
+// etc.
+```
+
+
