@@ -365,14 +365,14 @@ include("menu.php");
 $menu_park_code = $park_code;
 $menu_unit_id = $unit_id;
 // log to the browser console
-\Utils\Logging::consolejson([$menu_park_code, $menu_unit_id]);
+\Utils\Logging::consolejson(["menu", $menu_park_code, $menu_unit_id]);
 
 // see if these come from the request
 extract($_REQUEST);
 $req_park_code = $_REQUEST['park_code'];
 $req_unit_id = $_REQUEST['unit_id'];
 // log to the browser console
-\Utils\Logging::consolejson([$req_park_code, $req_unit_id]);
+\Utils\Logging::consolejson(["request", $req_park_code, $req_unit_id]);
 
 if(empty($park_code) AND empty($unit_id)){exit;}
 ```
@@ -381,10 +381,12 @@ Now navigate to the page via the GUI flow, the same way a user logging into the 
 
 ```json
 [
+	"menu"
     "",
     null
 ]
 [
+	"request"
     null,
     null
 ]
@@ -396,16 +398,20 @@ Selecting a park reloads the page. After we have selected a park our console rea
 
 ```json
 [ 
+	"menu",
 	"CRMO", 
 	null
 ]
 [
+	"request",
     "CRMO", 
     null
 ]
 ```
 
-Great! `$park_code` is defined in the request, but also in `menu.php`. However we will pick the request as our *single source of truth* since our extract statement comes after our include. No matter what `menu.php` says `$park_code` is, if our request contains `park_code=` Let's define it right below the extract.
+`$park_code` is defined in the request, but also in `menu.php`. However we will pick the request as our *single source of truth* since our extract statement comes after our include. No matter what `menu.php` says `$park_code` is, if our request contains `park_code` then it will override it.
+
+Great! Let's define `$park_code` right below the extract.
 
 ```php
 // Request Parameters
@@ -413,11 +419,32 @@ extract($_REQUEST);
 $park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
 ```
 
-We need that `isset` because when we visited the page at first, that request param was not set. It's good practice to do this and will make it clear that we aren't 100% sure if this variable is defined or not.
+We need that `isset` because when we visited the page at first, that request param was not set. It's good practice to do this and will make it clear that we are handling the case if this parameter is set or not.
 
 Now that our variable is defined, we can right click it and select "Find all References" from the context menu. This should open a buffer that shows everywhere in this file that this variable is used. If we are ever unsure if a variable has been defined or not, we can right click it and select "Find Definition" to bring us to where we defined it.
 
 "Find Definition" won't work as intended right now, since there are statements that redefine it later in the file, but it will serve useful once we clean those up, and help us find the places where we are redefining it.
+
+Next, let's open the second dropdown and select a unit. I'm going to pick "Central Unit". The page refreshes, and now our console reads:
+
+```json
+[
+	"menu",
+	"CRMO", 
+	"95"
+]
+[
+	"request",
+    "CRMO", 
+    "95"
+]
+```
+
+Deducting the same way as before, we know that `$unit_id` is set in the request. Let's define it & get rid of our logging statements to clean up the console.
+
+```php
+
+```
 
 
 
