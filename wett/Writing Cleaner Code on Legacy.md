@@ -784,8 +784,9 @@ Here's how I refactored it:
 ```php
 // =============================== Dependencies =====================
 
-$connection = \Utils\SQL::getConnection('fire');
+include("menu.php");
 include("../../include/get_parkcodes_dist.php");
+$connection = \Utils\SQL::getConnection('fire');
 
 
 // =============================== State ============================
@@ -794,4 +795,15 @@ $table_1 = "burn_history";
 $table_2 = "units";
 ```
 
-I'm using the 
+Here's the definition for `\Utils\SQL::getConnection($db)`:
+
+```php
+public static function getConnection($db)
+{
+	$database = $db; // iConnect uses $database and $db
+	include $_SERVER['DOCUMENT_ROOT'] . '/../include/iConnect.inc';
+	return $connection;
+}
+```
+
+It returns a database connection and prevents any included variables from messing with `iConnect.inc`. 
