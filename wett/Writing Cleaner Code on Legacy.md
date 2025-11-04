@@ -317,3 +317,7 @@ echo "
 </html>";
 ?>
 ```
+
+Our thing to look at will be the top of the file, specifically `extract` and `include` statements. Our goal here is to not *directly* target getting rid of these (at first), but to be aware of where any variables we use in this file without explicitly defining them come from.
+
+Explicitly defining these variables is 
