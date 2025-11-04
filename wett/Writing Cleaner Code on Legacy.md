@@ -547,12 +547,49 @@ href='$del_link'
 Looking at #2
 
 ```php
-foreach
-
-@$link = $ARRAY_prescription[$value];
-echo "&nbsp;&nbsp;&nbsp;View Prescription: <a href='/fire/$link' target='_blank'>$name</a>
+foreach ($ARRAY as $index => $array) {
+    foreach ($array as $fld => $value) {
+		// ...
+		@$link = $ARRAY_prescription[$value];
+		echo "&nbsp;&nbsp;&nbsp;View Prescription: <a href='/fire/$link' target='_blank'>$name</a><input type='hidden' name='unit_history_prescription' value='$k'></td>";
+		// ...
+	}
+}
 ```
 
-We need to be careful here. Your first instinct might to be to look into how `$ARRAY_prescription` is defined. This is a bad idea, because it will send you down a rabbit hole and increase your scope. Our target now is looking for parameters that are reused across the page. This is only used in one place, and we know that because it's accessing an array value inside of a `foreach` loop. We can ignore it for now.
+We need to be careful here. Your first instinct might to be to look into how `$ARRAY_prescription` is defined. This is a bad idea, because it will send you down a rabbit hole and increase your scope. Our target now is looking for parameters that are reused across the page. This is only used in one place, and we know that because it's accessing an array value inside of a nested `foreach` loop. It also might link to a completely different page. We can ignore it for now.
 
-For #3 
+#3 and #4 live a little further down
+
+```php
+foreach ($exp as $k => $v) {
+	$exp1 = explode("*", $v);
+	$file_id = $exp1[0];
+	$file = $exp1[1];
+	$del_link = "burn_history_upload.php?delete=$file_id";
+
+	$exp3 = explode("*", $exp2[$k]);
+	$original_file = $exp3[1];
+	$input .= "<br />View Evaluation: <a href='$file' target='_blank'>file</a> ==> <b>$original_file</b>";
+	if ($level > 3) {
+		$input .= " ===> <a href='$del_link' onclick=\"return confirm('Are you sure you want to delete this File?')\">delete</a>";
+	}
+}
+```
+
+Again, let's not mess with `$file` since it's not guaranteed to link to the page we are working on. And looking at `$del_link` we see it points to a different file, so we don't care about defining these on this page.
+
+Alright, so we've exhausted all our options for `href=`. Now let's look at another place request params can be set: `<form>`.  There are 3 forms on this page.
+
+```php
+// Ctrl+F `<form`
+
+// #1
+echo "<td><form><select name='file' onChange=\"MM_jumpMenu('parent',this,0)\"><option selected=''>Select a Unit:</option>";
+// #2
+echo "<td><form><select name='file' onChange=\"MM_jumpMenu('parent',this,0)\"><option selected=''>Select a History for a $pass_unit_name:</option>";
+// #3
+echo "<form method='post' action='burn_history_upload.php' enctype='multipart/form-data'>";
+
+
+```
