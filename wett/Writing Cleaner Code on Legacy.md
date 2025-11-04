@@ -515,7 +515,7 @@ href='$file'
 href='$del_link'
 // #5
 href='participants.php?park_code=$park_code&unit_id=$unit_id&history_id=$history_id'
-// $6
+// #6
 href='burn_history.php?park_code=$park_code&history_id=$history_id&del=delete' 
 ```
 
@@ -531,5 +531,24 @@ $del = isset($_REQUEST['del']) ? $_REQUEST['del'] : null;
 $submit = isset($_REQUEST['submit']) ? $_REQUEST['submit'] : null;
 ```
 
+And I'm going to update our list for clarity.
 
+```php
+// Ctrl+F `href=`
 
+// #2
+href='/fire/$link'
+// #3
+href='$file'
+// #4
+href='$del_link' 
+```
+
+Looking at #2
+
+```php
+@$link = $ARRAY_prescription[$value];
+echo "&nbsp;&nbsp;&nbsp;View Prescription: <a href='/fire/$link' target='_blank'>$name</a>
+```
+
+We need to be careful here. Your first instinct might to be to look into how `$ARRAY_prescription` is defined. This is a bad idea, because it will send you down a rabbit hole and increase your scope. Our target now is looking for parameters that are reused across the page. This is only used in one place, and we know that because 
