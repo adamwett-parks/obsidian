@@ -634,7 +634,7 @@ $emid = isset($_SESSION['fire']['emid']) ? $_SESSION['fire']['emid'] : null;
 Now we are fairly confident that we have all our request parameters. 
 
 #### "OK, cool. But why? What does that do for us?"
-This page isn't a good example, but lots of pages check for missing values and might even set them in the same line. Remember the output from our first time we logged to the console?
+Lots of pages check for missing values and might even set them in the same line. Remember the output from our first time we logged to the console?
 
 ```json
 [
@@ -655,10 +655,15 @@ Well inside of `menu.php` there is this line:
 if(empty($park_code)){$park_code="";}
 ```
 
-Another example is this
+Another example is this:
 
 ```php
-
+if (!empty($unit_id)) {
 ```
 
-This pattern is really common across the codebase. If we move all of these checks to the top of the file we can avoid 
+This pattern is really common across the codebase. If we move all of these undefined checks to the top of the file we can avoid having to check for undefined errors by sing *falsy* value like `null`, `""`, or `0`. I prefer to use `null` because it means that there is no value. By dedicating a space for these undefined checks at the top of the file, we can just write:
+
+```php
+if ($unit_id) {
+```
+
