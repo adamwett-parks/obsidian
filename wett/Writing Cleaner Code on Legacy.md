@@ -711,7 +711,7 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - State
 	- database connection
 	- gateway classes
-	- semantic variables dependent on our hooks
+	- semantic variables
 - Access
 	- Use state to determine if someone has access to the page or if the rest of the page should render. Common checks include:
 		- is our `$level` high enough?
@@ -722,7 +722,7 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 	- HTML components
 - Handlers
 	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
-	- Control flow to execute the correct action & maybe `die()` afterwards
+	- Control flow to execute the correct action & maybe `die()` afterwards if it's a POST request.
 - Data Fetching
 	- Function to compose a `WHERE` clause
 	- Function to execute a `SELECT` statement
@@ -768,3 +768,30 @@ if (!$park_code and !$unit_id) exit();
 3. I added a comment explaining WHY that code is there, not just WHAT it does.
 4. I used a one-line `if` statement. This is just aesthetic preference. Sometimes they're good, sometimes they're bad.
 
+Let's move on to the next chunk of code:
+
+```php
+$table_1 = "burn_history";
+$table_2 = "units";
+
+include("../../include/iConnect.inc");
+include("../../include/get_parkcodes_dist.php");
+mysqli_select_db($connection, 'fire');
+```
+
+Here's how I refactored it:
+
+```php
+// =============================== Dependencies =====================
+
+$connection = \Utils\SQL::getConnection('fire');
+include("../../include/get_parkcodes_dist.php");
+
+
+// =============================== State ============================
+
+$table_1 = "burn_history";
+$table_2 = "units";
+```
+
+I'm using the 
