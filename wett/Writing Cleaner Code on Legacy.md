@@ -584,12 +584,41 @@ Alright, so we've exhausted all our options for `href=`. Now let's look at anoth
 ```php
 // Ctrl+F `<form`
 
-// #1
+// form #1
 echo "<td><form><select name='file' onChange=\"MM_jumpMenu('parent',this,0)\"><option selected=''>Select a Unit:</option>";
-// #2
+// form #2
 echo "<td><form><select name='file' onChange=\"MM_jumpMenu('parent',this,0)\"><option selected=''>Select a History for a $pass_unit_name:</option>";
-// #3
+// form #3
 echo "<form method='post' action='burn_history_upload.php' enctype='multipart/form-data'>";
-
-
 ```
+
+Since form #3 is linking to a different page, we have no use to define those params on this one. Let's look for occurrences of `name=` that aren't in form #3
+
+```php
+// Ctrl+F `name=`
+
+// name #1
+echo "<td><form><select name='file' onChange=\"MM_jumpMenu('parent',this,0)\"><option selected=''>Select a Unit:</option>";
+
+// name #2
+echo "<td><form><select name='file' onChange=\"MM_jumpMenu('parent',this,0)\"><option selected=''>Select a History for a $pass_unit_name:</option>";
+
+// the rest are inside form #3, so we can ignore them
+```
+
+There's that pesky 'file' param again. Let's stay out of JavaScript land and just define file at the top to be safe. We should also add a log for it since we aren't sure exactly what it is.
+
+```php
+// Request Parameters
+extract($_REQUEST);
+$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
+$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
+$history_id = isset($_REQUEST['history_id']) ? $_REQUEST['history_id'] : null;
+$del = isset($_REQUEST['del']) ? $_REQUEST['del'] : null;
+$submit = isset($_REQUEST['submit']) ? $_REQUEST['submit'] : null;
+$file = isset($_REQUEST['file']) ? $_REQUEST['file'] : null;
+
+\Utils\Logging::consolejson(["file" => $file]);
+```
+
+Another target for missing variables is `$_SESSION`, this page doesn't use any, but the process is si
