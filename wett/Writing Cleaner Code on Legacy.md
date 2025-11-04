@@ -732,14 +732,31 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - HTML
 	- The main body of the page, commonly a big table
 
-I'm going to add single-line comments that span 160 characters to clearly separate the page into sections
+I'm going to add single-line comments that span >120 characters to clearly separate the page into sections.
 
 ```php
-// ============================ Dependencies ================================
+// =============================== Dependencies ============================
 
-// ================================ State ===================================
+// =============================== State ===================================
+
+// =============================== Access ==================================
 
 // etc.
 ```
 
+Remember this code from earlier? Where do you think it should go? What else can we do to it to clean it up?
 
+```php
+if (empty($park_code) and empty($unit_id)) {
+    exit;
+}
+```
+
+Here's how I refactored it:
+
+```php
+// =============================== Access ==================================
+
+/
+if (!$park_code == null and !$unit_id == null) exit();
+```
