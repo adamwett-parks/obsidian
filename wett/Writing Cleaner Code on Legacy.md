@@ -720,7 +720,7 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - Functions
 	- Pieces of business logic used on the page
 	- HTML components
-- Actions
+- Handlers
 	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
 	- Control flow to execute the correct action & maybe `die()` afterwards
 - Data Fetching
@@ -757,6 +757,14 @@ Here's how I refactored it:
 ```php
 // =============================== Access ==================================
 
-/
-if (!$park_code == null and !$unit_id == null) exit();
+// Only show the page if we've selected a park and a burn unit.
+if (!$park_code and !$unit_id) exit();
+
+// ...
 ```
+
+1. I moved it to the access section. 
+2. I removed the now-redundant `empty()` checks.
+3. I added a comment explaining WHY that code is there, not just WHAT it does.
+4. I used a one-line `if` statement. This is just aesthetic preference. Sometimes they're good, sometimes they're bad.
+
