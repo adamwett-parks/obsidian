@@ -458,8 +458,18 @@ $table_2 = "units";
 
 Refreshing the page and playing around with the forms gives us the same behavior as before, so everything's peachy.
 
+A few lines down we see another missing variable `history_id` lets `Ctrl+F` it on the page and see if we can locate where it might be defined.
 
+```php
+foreach ($ARRAY_history as $index => $array) {
+    $u = $array['unit_id'];
+    $k = $array['history_id'];
+    $v = $array['date_'];
+    echo "<option value='$file?park_code=$park_code&unit_id=$u&history_id=$k'>$v</option>";
+}
+```
 
+Gotcha! `$history_id` is set via a form in this file. Let's de 
 
 
 
