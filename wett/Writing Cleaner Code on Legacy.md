@@ -484,7 +484,7 @@ Moving on to `$del`:
 ```php
 if (!empty($history_id) and @$del == "delete") {
 
-// Ctrl+F 'del='
+// Ctrl+F `del=`
 
 echo "<tr><td><a href='burn_history.php?park_code=$park_code&history_id=$history_id&del=delete' onclick=\"return confirm('Are you sure you want this Burn History?')\">Delete</a></td></tr>";
 ```
@@ -500,5 +500,23 @@ $history_id = isset($_REQUEST['history_id']) ? $_REQUEST['history_id'] : null;
 $del = isset($_REQUEST['del']) ? $_REQUEST['del'] : null;
 ```
 
+Instead of manually digging thru the file, let's `Ctrl+F` for `href=` and look for request params that we haven't explicitly defined yet.
 
+```php
+// Ctrl+F `href=`
+
+href='burn_history.php?submit=Add&park_code=$park_code&unit_id=$unit_id'
+
+href='/fire/$link'
+
+$input .= "<br />View Evaluation: <a href='$file' target='_blank'>file</a> ==> <b>$original_file</b>";
+
+$input .= " ===> <a href='$del_link' onclick=\"return confirm('Are you sure you want to delete this File?')\">delete</a>";
+
+echo "<tr><td></td><td align='right'>Enter <a href='participants.php?park_code=$park_code&unit_id=$unit_id&history_id=$history_id'>Participants</a>";
+
+echo "<tr><td><a href='burn_history.php?park_code=$park_code&history_id=$history_id&del=delete' onclick=\"return confirm('Are you sure you want this Burn History?')\">Delete</a></td></tr>";
+```
+
+We can see that these variables are request params: `$`
 
