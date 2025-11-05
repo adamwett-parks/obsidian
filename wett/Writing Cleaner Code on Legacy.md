@@ -883,7 +883,7 @@ function getPrescriptions($connection, $park_code, $unit_id) {
 			WHERE park_code='$park_code' AND unit_id='$unit_id'
 			ORDER BY id";
 	$result = $connection->query($sql);
-	return \Utils\SQL::fetchAll($result);
+	return \Utils\SQL::fetchAll($result); // while ($result) $row[] = $result->fetch_assoc();
 }
 
 // =============================== State ============================
@@ -892,7 +892,7 @@ $prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_
 
 $prescription_names = array_map(function ($row) {
     return $row['file_name'];
-}, $prescriptions);
+}, $prescriptions); // makes a 1D array of all file_names
 }
 
 ```
@@ -902,7 +902,5 @@ $prescription_names = array_map(function ($row) {
 3. Call the function and store the result in the state section
 4. Use `array_map` to get a single column from each row
 
-`\Utils\SQL::fetchAll($result)` takes a result from a query and iterates on it, fetching all the rows. It throws an error if it fails.
-
-`array_map` applies a callback to each element of the input array, and appends the result to the output array.
-
+> **Note**
+> We remove the control flow outside of the function to make it easier to use. We could have kept it inside and returned an empty array, but now our function is more of a black box. For the most part, control 
