@@ -841,7 +841,7 @@ function getPrescriptions($connection, $park_code, $unit_id) {
 
 // =============================== State ============================
 
-$prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_code, $unit_id) : [];
+$prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_code, $unit_id) : null;
 
 $prescription_names = array_map(function ($row) {
     return $row['file_name'];
@@ -941,4 +941,23 @@ $prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_
 if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 ```
 
-Notice that keeping the control flow on the page i
+Notice that keeping the control flow on the page itself and out of the function requires us to pass a bunch of parameters. This is a **good thing**. To illustrate why, I will write an alternative version that takes no parameters. You should be able to use it anywhere, right?
+
+```php
+public static function badGetPrescriptions() {
+	$connection = \Utils\SQL::getConnection();
+	$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
+	$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
+	
+	if (!($unit_id && $park_code)) return null;
+	
+	$sql = "SELECT *
+			FROM prescriptions
+			WHERE park_code='$park_code' AND unit_id='$unit_id'
+			ORDER BY id";
+	$result = $connection->query($sql);
+	return \Utils\SQL::fetchAll($result);
+}
+```
+
+In theory, yes. But in practice there's too much happening inside this black box that is hi
