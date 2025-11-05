@@ -1,3 +1,5 @@
+TODO: this intro sucks...
+
 In this tutorial we will be refactoring `fire/burn_history.php`. I'm using an actual file from legacy so the ideas I describe stand out more and can map directly to a real example instead of an abstracted one. I chose `burn_history.php` in particular
 
 Here's what the file looks like at the start of the process. Just skim through it for 30 seconds.
@@ -988,4 +990,5 @@ So when writing functions for gateway classes, make sure you:
 If you follow the rules above, your functions will be highly reusable and easy to read.
 
 > **Note**
-> Depending on the application, it might not make sense to have a single gateway class for that application. For example, in MoneyCounts there are "modules" for PCards, Preapprovals, Projects, etc.  In this case, you might want to make a gateway class for that specific module. The Preapprovals module has it's own class in `_global/Budget/Preapprovals.php`. Don't get too caught up about over-organizing the code. You don't want to make an entirely new file for one function. 
+> Depending on the application, it might not make sense to have a single gateway class for that application. For example, in MoneyCounts there are "modules" for PCards, Preapprovals, Projects, etc.  In this case, you might want to make a gateway class for that specific module. The Preapprovals module has it's own class in `_global/Budget/Preapprovals.php`. Don't get too caught up about over-organizing the code. You don't want to make an entirely new file for one function. The need for multiple files, and what to put where, will make itself clear once the app's gateway class reaches that point.
+
