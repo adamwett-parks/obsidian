@@ -888,7 +888,7 @@ function deleteHistory($connection, $history_id) {
 if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 ```
 
-## 4 - Gateway Classes
+## 4 - Writing Gateway Classes
 Here's the meat and potatoes of this document. Gateway classes help us:  
 1. create a single source of truth for an application / operations on a table
 2. reuse functions & queries
@@ -901,7 +901,9 @@ This will cut down on us:
 3. writing & reading spaghetti code
 4. spending hours on a "simple" PA
 
-Simply put, a gateway class is a container for functions and constants. We aren't instantiating these functions, so all methods & properties we write should be static. Here's an example for our page:
+Simply put, a gateway class is a container for functions and constants. A gateway class should live inside of `_global/App/AppGateway.php`.
+
+We aren't instantiating these functions, so all methods & properties we write should be static. Here's an example for our page:
 
 ```php
 // _globals/Fire/FireGateway.php
@@ -978,9 +980,12 @@ You *have* to peek inside to get a good idea what is it the function does. The n
 But it is obvious why we don't name stuff like this.
 
 So when writing functions for gateway classes, make sure you:
-1. Make them stateless; Pass in parameters for functions instead of relying on the global scope
+1. Make them stateless; Pass in parameters instead of relying on the global scope
 2. Limit control flow & assume that all parameters are properly set
 3. Keep them simple, one function should do one thing (or that same thing multiple times)
-4. Give your functions descriptive names
+4. Give them a descriptive name
 
-If you follow the rules above, your gateway classes will be highly reusable and easy to read.
+If you follow the rules above, your functions will be highly reusable and easy to read.
+
+> **Note**
+> Depending on the application, it might not make sense to have a single gateway class for that application. For example, in MoneyCounts there are "modules" for PCards, Preapprovals, Projects, etc.  In this case, you might want to make a gateway class for that specific module. The Preapprovals module has it's own class in `_global/Budget/Preapprovals.php`. Don't get too caught up about over-organizing the code. You don't want to make an entirely new file for one function. 
