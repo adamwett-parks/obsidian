@@ -888,8 +888,8 @@ function deleteHistory($connection, $history_id) {
 if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 ```
 
-## 4 - Static Classes
-Here's the meat and potatoes of this document. Gateway classes help us:  
+## 4 - Gateway Classes
+Here's the meat and potatoes of this document. Static classes help us:  
 1. create a single source of truth for an application / operations on a table
 2. reuse functions & queries
 3. keep our UI logic & our business logic separate
@@ -901,14 +901,14 @@ This will cut down on us:
 3. writing & reading spaghetti code
 4. spending hours on a "simple" PA
 
-Simply put, a gateway class is a container for functions. We aren't instantiating these functions, so all class methods we write should be static, and the function will have no state. Here's an example for our page:
+Simply put, a gateway class is a container for functions and constants. We aren't instantiating these functions, so all class methods we write should be static, and the function will have no state. Here's an example for our page:
 
 ```php
 // _globals/Fire/BurnHistory.php
 
 namespace Fire;
 
-class BurnHistory {
+class FireGateway {
 
 	public static function getPrescriptions($connection, $park_code, $unit_id) {
 		$sql = "SELECT *
@@ -965,10 +965,19 @@ $prescriptions = \Fire\BurnHistory::getPrescriptions();
 ```
 
 In theory, yes. But in practice there's too much happening inside this function that is hidden by a black box:
+- the function creates a new connection to the database (this is slow!)
 - the function uses the request param `unit_id`
 - the function uses the request param `park_code`
 - the function will return null until this request params are set
-You *have* to peek inside to get a good idea what is it the function does. The name is very misleading. A better name would be:
+You *have* to peek inside to get a good idea what is it the function does. The name is very misleading. A more descriptive name would be:
+
 ```php
-\Fire\BurnHistory::checkRequestParamsForParkCodeAndUnitIdIfTheyAreSetGetPrescriptionsOtherwiseReturnNull
+\Fire\BurnHistory::getPrescriptionsIfRequestParamsParkCodeAndUnitIdAreSetOtherwiseReturnNull()
 ```
+
+But it is obvious why we don't name stuff like this.
+
+So when writing functions for static classes, make sure you:
+1. Pass in parameters instead of relying on the global scope
+2. Limit control flow & assume that all parameters are properly set
+3. 
