@@ -889,7 +889,14 @@ if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 ```
 
 ## 4 - Gateway Classes
-Here's the meat and potatoes of this document. We will use gateway classes to solve the following problems
+Here's the meat and potatoes of this document. Gateway classes help us:  
+1. create a single source of truth for an application / operations on a table
+2. reuse functions & queries
+3. keep our UI logic & our business logic separate
+4. make our files easier to read & maintain
 
-- create queries & functions that are reusable across pages
-- a single source of truth for logic & queries
+This will solve:  
+1. tracking down copy-and-pasted code if something needs to be changed
+2. reinventing the wheel
+3. spaghetti code
+4. spending hours on a "simple" PA
