@@ -710,26 +710,22 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 	- gateway classes
 	- database connection
 	- anything else that happens outside of the file that affects it
-- Access
-	- Use state to determine if someone has access to the page or if the rest of the page should render. Common checks include:
-		- is our `$level` high enough?
-		- do we have the correct request params?
-		- we might need to make a specific query, like checking if we are a Budget Officer or a DISU. is the result OK?
 - Functions
 	- Pieces of business logic
 	- Small SQL queries that run before the main query
+- UI Components
+	- Functions that render HTML, especially conditionally or injecting "props" into them
 - State
 	- semantic variables
 	- results from calling functions
-- Actions/Handlers
-	- Functions to handle different actions the page can perform (usually one for each possible value of `$submit`)
-	- Control flow to execute the correct action & maybe `die()` afterwards if it's a POST request.
+- Control Flow
+	- Access controls based on session variables or a function
+	- Running functions based on request params like `$submit` (& maybe `die()` afterwards if it's a POST request)
 - Main Query
 	- Function to compose a `WHERE` clause
 	- Function to execute a `SELECT` statement
 	- Control flow to actually run the main SQL query for the page to use
-- UI Components
-	- Functions that render HTML, especially conditionally or injecting "props" into them
+
 - HTML
 	- The main body of the page, commonly a big table
 
@@ -831,15 +827,19 @@ This would be a good thing to move into the actions section. We will clean it up
 > **Note:** cleaning something like this up isn't entirely necessary. It works as is, is decently clear what it does, and is easily modifiable. Cleaning it up will mostly make it look nicer. Just make sure you move it to the right spot & add a comment to make it easier to locate.
 
 ```php
-// =============================== Actions ==================================
+// =============================== Functions ========================
 
-// Handle deleting a record
-if ($history_id and $del == 'delete') {
+function deleteHistory($connection, $history_id) {
 	$sql = "DELETE 
 			FROM $table1 
 			WHERE history_id='$history_id'";
 	$result = $connection->query($sql) or die("Couldn't execute query. $sql");
 }
+
+// =============================== Actions ==================================
+
+// Handle deleting a record
+if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 
 ```
 
@@ -903,4 +903,4 @@ $prescription_names = array_map(function ($row) {
 4. Use `array_map` to get a single column from each row
 
 > **Note**
-> We remove the control flow outside of the function to make it easier to use. We could have kept it inside and returned an empty array, but now our function is more of a black box. For the most part, control 
+> We remove the control flow outside of the function to make it easier to use. We could have kept it inside and returned an empty array, but now our function is more of a black box. It might seem trivial while the function is living in this file, but in this 
