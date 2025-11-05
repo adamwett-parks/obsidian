@@ -4,27 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "00c810e9b3547d64",
+        "id": "07d9eaf6721ac922",
         "type": "tabs",
         "children": [
           {
-            "id": "3f22a2ea89757adf",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2025-11-04.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "2025-11-04"
-            }
-          },
-          {
-            "id": "f80c578c144b95fe",
+            "id": "6860cd5fa9b9cb52",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -37,8 +21,7 @@
               "title": "Writing Cleaner Code on Legacy"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0f0986c084d637c5",
@@ -168,19 +150,8 @@
               "icon": "lucide-list",
               "title": "Outline of roundtable 2025-07-07"
             }
-          },
-          {
-            "id": "b96e84e26bc4997e",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -199,38 +170,39 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f80c578c144b95fe",
+  "active": "6860cd5fa9b9cb52",
   "lastOpenFiles": [
-    "2025-11-04.md",
+    "meetings/2025-11-03 rt.md",
     "Writing Cleaner Code on Legacy.md",
     "Untitled.base",
+    "2025-11-04.md",
+    "V2 Dev Guide.md",
     "logs/2025-10-30.md",
-    "meetings/2025-11-03 rt.md",
-    "Untitled 9.md",
     "meetings/2025-10-21 units.md",
     "meetings/2025-10-20 rt.md",
-    "meetings/2025-10-16 amu.md",
-    "V2 Dev Guide.md",
-    "Untitled 7.md",
-    "Untitled 8.md",
-    "_stack.md",
-    "logs/2025-10-08.md",
+    "conflict-files-obsidian-git.md",
     "testing pa-1434.md",
-    "templates/{{date}} roundtable.md",
-    "templates",
+    "_stack.md",
+    "Untitled 9.md",
+    "Untitled 8.md",
+    "Untitled 7.md",
+    "meetings/2025-10-16 amu.md",
     "meetings/2025-10-13 roundtable.md",
-    "about-me.md",
-    "atoms/git cheatsheet.md",
+    "meetings/2025-09-29 rt.md",
+    "templates/{{date}} roundtable.md",
+    "meetings/Untitled.base",
+    "meetings/2025-06-27 v2.md",
     "logs/2025-09-25.md",
+    "templates",
+    "logs/2025-10-08.md",
     "atoms/separated employees.md",
-    "icarus.md",
+    "atoms/git cheatsheet.md",
     "atoms",
     "Untitled 6.md",
-    "meetings/2025-09-30 parkalerts.md",
-    "meetings/2025-09-29 rt.md",
-    "logs/2025-09-30.md",
     "Legacy Manifesto.md",
+    "Untitled 5.md",
     "logs",
+    "sinus.md",
     "Pasted image 20250828070010.png",
     "Pasted image 20250828070949.png",
     "Pasted image 20250828070436.png",
@@ -245,7 +217,6 @@
     "docs/sop",
     "Untitled 1",
     "output.docx",
-    "docs/priv-apps",
-    "docs/version-2"
+    "docs/priv-apps"
   ]
 }

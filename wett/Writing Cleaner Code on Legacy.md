@@ -1,4 +1,4 @@
-In this tutorial we will be refactoring `fire/burn_history.php`. I'm using an actual file from legacy so the ideas I describe stand out more and can map directly to a real example instead of an abstracted one. I chose `burn_history.php` in particular 
+In this tutorial we will be refactoring `fire/burn_history.php`. I'm using an actual file from legacy so the ideas I describe stand out more and can map directly to a real example instead of an abstracted one. I chose `burn_history.php` in particular
 
 Here's what the file looks like at the start of the process.
 
