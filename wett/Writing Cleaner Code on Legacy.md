@@ -879,7 +879,7 @@ function deleteHistory($connection, $history_id) {
 	$sql = "DELETE 
 			FROM $table1 
 			WHERE history_id='$history_id'";
-	$result = $connection->query($sql) or die("Couldn't execute query. $sql");
+		$result = $connection->query($sql);
 }
 
 // =============================== Control Flow ==================================
@@ -904,7 +904,11 @@ This will cut down on us:
 Simply put, a gateway class is a container for functions. We aren't instantiating these functions, so all class methods we write should be static, and the function will have no state. Here's an example for our page:
 
 ```php
-namespace BurnHistoryGateway {
+// _globals/Fire/BurnHistory.php
+
+namespace Fire;
+
+class BurnHistory {
 
 	public static function getPrescriptions($connection, $park_code, $unit_id) {
 		$sql = "SELECT *
@@ -914,6 +918,27 @@ namespace BurnHistoryGateway {
 		$result = $connection->query($sql);
 		return \Utils\SQL::fetchAll($result);
 	}
+	
+	public static function deleteBurnHistory($connection, $history_id) {
+		$sql = "DELETE 
+			FROM $table1 
+			WHERE history_id='$history_id'";
+		$result = $connection->query($sql);
+	}
 
 }
 ```
+
+```php
+
+// fire/burn_history.php
+
+// =============================== State ============================
+$prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_code, $unit_id) : [];
+
+// =============================== Control Flow =====================
+// Handle deleting a record
+if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
+```
+
+Notice that keeping the control flow on the page i
