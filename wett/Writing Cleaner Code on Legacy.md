@@ -888,15 +888,32 @@ function deleteHistory($connection, $history_id) {
 if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 ```
 
-## 4 - Gateway Classes
+## 4 - Static Classes
 Here's the meat and potatoes of this document. Gateway classes help us:  
 1. create a single source of truth for an application / operations on a table
 2. reuse functions & queries
 3. keep our UI logic & our business logic separate
 4. make our files easier to read & maintain
 
-This will solve:  
+This will cut down on us:  
 1. tracking down copy-and-pasted code if something needs to be changed
 2. reinventing the wheel
-3. spaghetti code
+3. writing & reading spaghetti code
 4. spending hours on a "simple" PA
+
+Simply put, a gateway class is a container for functions. We aren't instantiating these functions, so all class methods we write should be static, and the function will have no state. Here's an example for our page:
+
+```php
+namespace BurnHistoryGateway {
+
+	public static function getPrescriptions($connection, $park_code, $unit_id) {
+		$sql = "SELECT *
+			FROM prescriptions
+			WHERE park_code='$park_code' AND unit_id='$unit_id'
+			ORDER BY id";
+		$result = $connection->query($sql);
+		return \Utils\SQL::fetchAll($result);
+	}
+
+}
+```
