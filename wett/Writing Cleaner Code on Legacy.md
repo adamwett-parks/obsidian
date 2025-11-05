@@ -716,16 +716,15 @@ This is a structure that I have found to be quite helpful. It doesn't have to be
 - UI Components
 	- Functions that render HTML, especially conditionally or injecting "props" into them
 - State
-	- semantic variables
+	- semantic variables e.g. `$is_editing`
 	- results from calling functions
 - Control Flow
-	- Access controls based on session variables or a function
+	- Access controls based on state
 	- Running functions based on request params like `$submit` (& maybe `die()` afterwards if it's a POST request)
 - Main Query
 	- Function to compose a `WHERE` clause
 	- Function to execute a `SELECT` statement
-	- Control flow to actually run the main SQL query for the page to use
-
+	- Actually running the main query
 - HTML
 	- The main body of the page, commonly a big table
 
@@ -753,7 +752,7 @@ if (empty($park_code) and empty($unit_id)) {
 Here's how I refactored it:
 
 ```php
-// =============================== Access ==================================
+// =============================== Control Flow ==================================
 
 // Only show the page if we've selected a park and a burn unit.
 if (!$park_code and !$unit_id) exit();
@@ -804,45 +803,6 @@ public static function getConnection($db)
 }
 ```
 
-Moving on to the next chunk:
-
-```php
-if (!empty($history_id) and @$del == "delete") {
-    $sql = "Delete
-	from $table_1
-	where history_id='$history_id'
-	";  //echo "$sql"; exit;
-    $result = mysqli_query($connection, $sql) or die("Couldn't execute select query. $sql");
-}
-```
-
-What does this do, and why? When will it do it?
-
-- What: deletes a row
-- Why: the user asked to do so
-- When: `$history_id` is set and `$del` is `"delete"`
-
-This would be a good thing to move into the actions section. We will clean it up more later but for now we will just copy & paste it as is, indent it some, and add a comment.
-
-> **Note:** cleaning something like this up isn't entirely necessary. It works as is, is decently clear what it does, and is easily modifiable. Cleaning it up will mostly make it look nicer. Just make sure you move it to the right spot & add a comment to make it easier to locate.
-
-```php
-// =============================== Functions ========================
-
-function deleteHistory($connection, $history_id) {
-	$sql = "DELETE 
-			FROM $table1 
-			WHERE history_id='$history_id'";
-	$result = $connection->query($sql) or die("Couldn't execute query. $sql");
-}
-
-// =============================== Actions ==================================
-
-// Handle deleting a record
-if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
-
-```
-
 I'm not going to do into gross detail about every chunk I refactor, but for some I will highlight what I'm doing if it's novel.
 
 For this chunk:
@@ -865,13 +825,6 @@ if (!empty($unit_id)) {
 We turn it into this:
 
 ```php
-// =============================== Access ===========================
-
-// Only show the page if we've selected a park and a burn unit.
-if (!$park_code and !$unit_id) exit();
-
-
-
 // =============================== Functions ========================
 
 /**
@@ -903,4 +856,7 @@ $prescription_names = array_map(function ($row) {
 4. Use `array_map` to get a single column from each row
 
 > **Note**
-> We remove the control flow outside of the function to make it easier to use. We could have kept it inside and returned an empty array, but now our function is more of a black box. It might seem trivial while the function is living in this file, but in this 
+> We remove the control flow outside of the function to make it easier to use. We could have kept it inside and returned an empty array, but now our function is more of a black box. It might seem trivial while the function is living in this file, but the importance will stand out more after we abstract it into a *gateway class*
+
+
+We do something similar
