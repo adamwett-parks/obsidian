@@ -889,7 +889,7 @@ if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
 ```
 
 ## 4 - Gateway Classes
-Here's the meat and potatoes of this document. Static classes help us:  
+Here's the meat and potatoes of this document. Gateway classes help us:  
 1. create a single source of truth for an application / operations on a table
 2. reuse functions & queries
 3. keep our UI logic & our business logic separate
@@ -901,10 +901,10 @@ This will cut down on us:
 3. writing & reading spaghetti code
 4. spending hours on a "simple" PA
 
-Simply put, a gateway class is a container for functions and constants. We aren't instantiating these functions, so all class methods we write should be static, and the function will have no state. Here's an example for our page:
+Simply put, a gateway class is a container for functions and constants. We aren't instantiating these functions, so all methods & properties we write should be static. Here's an example for our page:
 
 ```php
-// _globals/Fire/BurnHistory.php
+// _globals/Fire/FireGateway.php
 
 namespace Fire;
 
@@ -921,7 +921,7 @@ class FireGateway {
 	
 	public static function deleteBurnHistory($connection, $history_id) {
 		$sql = "DELETE 
-			FROM $table1 
+			FROM burn_history
 			WHERE history_id='$history_id'";
 		$result = $connection->query($sql);
 	}
@@ -934,11 +934,11 @@ class FireGateway {
 // fire/burn_history.php
 
 // =============================== State ============================
-$prescriptions = ($park_code && $unit_id) ? \Fire\BurnHistory::getPrescriptions($connection, $park_code, $unit_id) : [];
+$prescriptions = ($park_code && $unit_id) ? \Fire\FireGateway::getPrescriptions($connection, $park_code, $unit_id) : [];
 
 // =============================== Control Flow =====================
 // Handle deleting a record
-if ($del == 'delete' && $history_id) deleteHistory($connection, $history_id)
+if ($del == 'delete' && $history_id) \Fire\FireGateway::deleteHistory($connection, $history_id)
 ```
 
 Notice that keeping the control flow on the page itself and out of the function requires us to pass a bunch of parameters. This is a **good thing**. To illustrate why, I will write an alternative version that takes no parameters. You should be able to use it anywhere, right?
@@ -960,7 +960,7 @@ public static function badGetPrescriptions() {
 }
 
 // fire/burn_history.php
-$prescriptions = \Fire\BurnHistory::getPrescriptions();
+$prescriptions = \Fire\FireGateway::getPrescriptions();
 
 ```
 
@@ -977,7 +977,10 @@ You *have* to peek inside to get a good idea what is it the function does. The n
 
 But it is obvious why we don't name stuff like this.
 
-So when writing functions for static classes, make sure you:
-1. Pass in parameters instead of relying on the global scope
+So when writing functions for gateway classes, make sure you:
+1. Make them stateless; Pass in parameters for functions instead of relying on the global scope
 2. Limit control flow & assume that all parameters are properly set
-3. 
+3. Keep them simple, one function should do one thing (or that same thing multiple times)
+4. Give your functions descriptive names
+
+If you follow the rules above, your gateway classes will be highly reusable and easy to read.
