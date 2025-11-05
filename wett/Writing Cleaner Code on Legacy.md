@@ -934,7 +934,7 @@ class BurnHistory {
 // fire/burn_history.php
 
 // =============================== State ============================
-$prescriptions = ($park_code && $unit_id) ? getPrescriptions($connection, $park_code, $unit_id) : [];
+$prescriptions = ($park_code && $unit_id) ? \Fire\BurnHistory::getPrescriptions($connection, $park_code, $unit_id) : [];
 
 // =============================== Control Flow =====================
 // Handle deleting a record
@@ -945,7 +945,7 @@ Notice that keeping the control flow on the page itself and out of the function 
 
 ```php
 public static function badGetPrescriptions() {
-	$connection = \Utils\SQL::getConnection();
+	$connection = \Utils\SQL::getConnection('fire');
 	$park_code = isset($_REQUEST['park_code']) ? $_REQUEST['park_code'] : null;
 	$unit_id = isset($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : null;
 	
@@ -958,6 +958,17 @@ public static function badGetPrescriptions() {
 	$result = $connection->query($sql);
 	return \Utils\SQL::fetchAll($result);
 }
+
+// fire/burn_history.php
+$prescriptions = \Fire\BurnHistory::getPrescriptions();
+
 ```
 
-In theory, yes. But in practice there's too much happening inside this black box that is hi
+In theory, yes. But in practice there's too much happening inside this function that is hidden by a black box:
+- the function uses the request param `unit_id`
+- the function uses the request param `park_code`
+- the function will return null until this request params are set
+You *have* to peek inside to get a good idea what is it the function does. The name is very misleading. A better name would be:
+```php
+\Fire\BurnHistory::checkRequestParamsForParkCodeAndUnitIdIfTheyAreSetGetPrescriptionsOtherwiseReturnNull
+```
