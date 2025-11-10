@@ -1,6 +1,5 @@
 In legacy, pages are very idiosyncratic, and it can be difficult to write code that can reused across pages. 
-For example in the Preapprovals rewrite, the main page uses the following query to get Joe Shimels pending approvals:
-
+For example in the Preapprovals rewrite, we use a query like the following to get a user's (Joe Shimel's) pending approvals.
 
 ```sql
 SELECT
@@ -35,11 +34,23 @@ FROM purchase_request_3
 WHERE
 	section_approved='u' AND
 	division_approved='u' AND 
-	%% other request params %%
 	(center_code IN ('ADMI', 'ADMN', 'ASRO', 'BOCR', 'CABE', 'CACR', 'CEDI', 'CENT', 'CHRO', 'CLNE', 'COMM', 'CONC', 'CRMO', 'DERI', 'DIRE', 'DISW', 'EDGS', 'ELKN', 'ENRI', 'FALA', 'FITE', 'FOFI', 'FOMA', 'FULA', 'GISP', 'GLSG', 'GOCR', 'GORG', 'GRAN', 'GRMO', 'GRST', 'HABE', 'HARI', 'HARO', 'INTE', 'ITOP', 'ITPR', 'JONE', 'JORD', 'JORI', 'KELA', 'LAHY', 'LAJA', 'LANO', 'LAPP', 'LAWA', 'LOHA', 'LURI', 'MARI', 'MEMI', 'MEMO', 'MOJE', 'MOMI', 'MOMO', 'MOTS', 'NARA', 'NDTO', 'NEDI', 'NERI', 'NWDI', 'OPRA', 'PACR', 'PAPL', 'PETT', 'PIMO', 'PIVI', 'PMET', 'PUIS', 'RARO', 'REEV', 'RELE', 'REMA', 'REMO', 'RERE', 'SACR', 'SAFE', 'SEDI', 'SILA', 'SOMO', 'SPHR', 'STMO', 'STPA', 'STWD', 'SUMT', 'SWDI', 'TRGR', 'VADE', 'VOLS', 'WAMI', 'WARE', 'WEBS', 'WEWO', 'WILD', 'WIUM', 'YEMO', 'dede', 'none', 'stwd', 'usfw') OR user_id = 'Shimel63')
 GROUP BY pa_number
 ORDER BY system_entry_date DESC
 LIMIT 2500
 ```
 
+It's generated with the following function
 
+```php
+// arguments omitted for brevity
+function selectQuery() {
+	$highest_approval = getMyHighestApprovalLevel();
+	$where = $where . " AND $h"
+
+	$where = whereClause()
+	$sql = "SELECT
+				...
+			WHERE $where"
+}
+```
