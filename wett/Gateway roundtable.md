@@ -46,7 +46,7 @@ It's generated with the following function:
 
 ```php
 // arguments omitted & query shortened for brevity
-function selectPreapprovals($connection, $params, $temp_id) {
+function whereClause($temp_id, $params) {
 	// example of using one of the optional params
 	if (isset($params['entered_before'])) {
 		$where .= " AND system_entry_date <= '" . $params['entered_before'] . "'";
@@ -58,6 +58,12 @@ function selectPreapprovals($connection, $params, $temp_id) {
 	$highest = getMyHighestApprovalLevel($temp_id) . "_approved";
 	$where = $where . " AND $highest = 'u'";
 	
+	return $where;
+}
+
+
+function selectPreapprovals($connection, $params, $temp_id) {
+	$where = whereClause($temp_id, $params);
 	$sql = "SELECT
 				...
 			WHERE $where"
@@ -83,10 +89,10 @@ To do this, we refactored my query into a *Gateway Class.*
 
 ## What is a Gateway Class?
 
-A Gateway class put simply, is a container for static functions. It doesn't have any state. Here's an example:
+A Gateway class put simply, is a container for static functions. It doesn't have a constructor or any internal state. Here's an example:
 
 ```php
-// _globals/Budget/PreApprovals.php
+// WebServer/Documents/_globals/Budget/PreApprovals.php
 
 namespace Budget;
 
@@ -98,7 +104,7 @@ class PreApprovals {
 	
 }
 
-// on another page
+// WebServer/Documents/budget/aDiv/some_page.php
 $hello_world = \Budget\PreApprovals::helloWorld();
 /*				^      ^             ^
 				|      |             |
@@ -110,4 +116,26 @@ $hello_world = \Budget\PreApprovals::helloWorld();
 // you might prefer this syntax, they do the same thing
 $PreApprovals = new \Budget\PreApprovals();
 $hello_world_alt = $PreApprovals->helloWorld();
+```
+
+Instead of manually including them, Gateway classes are loaded by our autoloader in `globalFunctions.php`. So if your page includes `globalFunctions`, you can reference any class written in the `_global` folder.
+
+Let's move the selectQuery function into the Gateway class for Preapprovals:
+
+```php
+// WebServer/Documents/_globals/Budget/PreApprovals.php
+
+namespace Budget;
+
+class PreApprovals {
+
+	public static function getMyHighestApprovalLevel($temp_id) {
+		// returns 'sec'
+	}
+	
+	public static function whereClause($temp_id, $params) {
+		return "Hello, world!"
+	}
+	
+}
 ```
