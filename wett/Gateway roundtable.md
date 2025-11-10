@@ -70,4 +70,11 @@ function selectPreapprovals($connection, $params, $temp_id) {
 ```
 
 For Preapprovals, Zelda wrote a component that displays the amount of pending approvals a user has:
-![component.png]()
+
+![[component.png]]
+
+Looks good Zelda!
+
+To go the value into her component she could have just copied & pasted my query into her component. For a more mature page, this isn't such a big deal, we do this all the time. But since I was still actively working on my page, she needed a way to replicate the behavior of my query without having to manually update her copy each time I tweaked it.
+
+To do this, we used a Gateway Class.*
