@@ -55,7 +55,7 @@ function whereClause($temp_id, $params) {
 	// ... more optional params ....
 	
 	// temp_id is required
-	$highest = getMyHighestApprovalLevel($temp_id) . "_approved";
+	$highest = getHighestApprovalLevel($temp_id) . "_approved";
 	$where = $where . " AND $highest = 'u'";
 	
 	return $where;
@@ -120,7 +120,7 @@ $hello_world_alt = $PreApprovals->helloWorld();
 
 Instead of manually including them, Gateway classes are loaded by our autoloader in `globalFunctions.php`. So if your page includes `globalFunctions`, you can reference any class written in the `_global` folder.
 
-Let's move the selectQuery function into the Gateway class for Preapprovals:
+Let's move the whereClause function into the Gateway class for Preapprovals, and write a function for Zelda to use:
 
 ```php
 // WebServer/Documents/_globals/Budget/PreApprovals.php
@@ -129,12 +129,26 @@ namespace Budget;
 
 class PreApprovals {
 
-	public static function getMyHighestApprovalLevel($temp_id) {
-		// returns 'sec'
+	public static function getHighestApprovalLevel($temp_id) {
+		// returns 'cashier', 'manager', 'district', or 'section'
 	}
 	
-	public static function whereClause($temp_id, $params) {
-		return "Hello, world!"
+	public static function whereClause($temp_id, $params = null) {
+		$where = "";
+		if ($params == null) {
+			// default behaviour if no page params are set
+		} else {
+			// ... do something with the params ...
+		}
+		$highest = getMyHighestApprovalLevel($temp_id) . "_approved";
+		$where = $where . " AND $highest = 'u'";
+		return $where;
+	}
+	
+	public static function getPendingApprovalCount($temp_id) {
+		$where = whereClause($temp_id); // omit params since this function is called on multiple pages
+		$sql = "SELECT pa_number FROM purchase_request_3 WHERE $where";
+		$result = 
 	}
 	
 }
