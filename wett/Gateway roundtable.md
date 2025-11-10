@@ -158,7 +158,7 @@ class PreApprovals {
 
 Awesome! Now Zelda can use `getPendingApprovalCount` without knowing anything about my page, and I can change the behavior of my query and the number in her component will change as well.
 
-But Zelda is still using this component across multiple pages. If she changes how it looks on one, she'll have to manually change how it looks on all of them. Gateway classes can solve this too!
+But Zelda is still using this component across multiple pages. If she changes how it looks on one, she'll have to manually change how it looks on all of them. She tried using `include` to link her file, but she was running into issues with variable names she used in her file overwriting the variables set on the pages she used.  Let's use a Gateway class to solve both of these problems:
 
 ```php
 // WebServer/Documents/_globals/Budget/PreApprovals.php
@@ -192,6 +192,36 @@ class PreApprovals {
 	}
 	
 	public static function renderMyPendingApprovalsButton($temp_id) {
-		
+		$targetUrl = '/budget/aDiv/park_purchase_request_view.php';
+        $pending = self::getPendingApprovalCount($temp_id);
+        $label = $pending > 0 ? "Pending Approvals ($pending)" : "No Pending Approvals";
+        // exit PHP tag and render HTML
+		?>
+	        <a href="<?= htmlspecialchars($targetUrl); ?>">
+	            <button type="submit"
+	                style="background-color:#007bff;
+	                       color:#fff;
+	                       border:none;
+	                       padding:8px 16px;
+	                       border-radius:4px;
+	                       cursor:pointer;
+	                       font-size:14px;">
+	                <?= htmlspecialchars($label); ?>
+	            </button>
+	        </a>
+		<?php
 	}
 ```
+
+Now when Zelda wants to use her button she just writes:
+
+```php
+// some_other_page.php
+$temp_id = $_SESSION['budget']['tempID'];
+// ...
+<?php \Budget\PreApprovals::renderMyPendingApprovalsButton($temp_id); ?>
+```
+
+In summary, Zelda used Gateway classes to:
+- avoid manually updating copied & pasted code
+- put my page's behaviou
