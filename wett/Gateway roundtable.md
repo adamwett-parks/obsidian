@@ -145,11 +145,53 @@ class PreApprovals {
 		return $where;
 	}
 	
-	public static function getPendingApprovalCount($temp_id) {
+	public static function getPendingApprovalCount($connection, $temp_id) {
+		$connection = //...
 		$where = whereClause($temp_id); // omit params since this function is called on multiple pages
 		$sql = "SELECT pa_number FROM purchase_request_3 WHERE $where";
-		$result = 
+		$result = mysqli_query($connection, $sql);
+		return mysqli_num_rows($result);
 	}
 	
 }
+```
+
+Awesome! Now Zelda can use `getPendingApprovalCount` without knowing anything about my page, and I can change the behavior of my query and the number in her component will change as well.
+
+But Zelda is still using this component across multiple pages. If she changes how it looks on one, she'll have to manually change how it looks on all of them. Gateway classes can solve this too!
+
+```php
+// WebServer/Documents/_globals/Budget/PreApprovals.php
+
+namespace Budget;
+
+class PreApprovals {
+
+	public static function getHighestApprovalLevel($temp_id) {
+		// returns 'cashier', 'manager', 'district', or 'section'
+	}
+	
+	public static function whereClause($temp_id, $params = null) {
+		$where = "";
+		if ($params == null) {
+			// default behaviour if no page params are set
+		} else {
+			// ... do something with the params ...
+		}
+		$highest = getMyHighestApprovalLevel($temp_id) . "_approved";
+		$where = $where . " AND $highest = 'u'";
+		return $where;
+	}
+	
+	public static function getPendingApprovalCount($temp_id) {
+		$connection = //...
+		$where = whereClause($temp_id); // omit params since this function is called on multiple pages
+		$sql = "SELECT pa_number FROM purchase_request_3 WHERE $where";
+		$result = mysqli_query($connection, $sql);
+		return mysqli_num_rows($result);
+	}
+	
+	public static function renderMyPendingApprovalsButton($temp_id) {
+		
+	}
 ```
