@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "Gateway roundtable"
             }
+          },
+          {
+            "id": "cb6a3dfd177836b9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Gateway roundtable.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Gateway roundtable"
+            }
           }
         ]
       }
@@ -172,9 +184,10 @@
   },
   "active": "6860cd5fa9b9cb52",
   "lastOpenFiles": [
+    "Gateway roundtable.pdf",
+    "Gateway roundtable.md",
     "Writing Cleaner Code on Legacy.md",
     "component.md",
-    "Gateway roundtable.md",
     "component.png",
     "Screenshot 2025-11-10 at 09-14-07 MoneyTracker.png:Zone.Identifier",
     "Screenshot 2025-11-10 at 09-14-07 MoneyTracker.png",
@@ -204,7 +217,6 @@
     "atoms/separated employees.md",
     "atoms/git cheatsheet.md",
     "atoms",
-    "Untitled 6.md",
     "logs",
     "Pasted image 20250828070010.png",
     "Pasted image 20250828070949.png",
@@ -216,7 +228,6 @@
     "CleanShot 2025-08-28 at 07.21.02.png",
     "CleanShot 2025-08-28 at 07.20.33.png",
     "docs/sop",
-    "Untitled 1",
-    "output.docx"
+    "Untitled 1"
   ]
 }

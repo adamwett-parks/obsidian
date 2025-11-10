@@ -162,7 +162,7 @@ But Zelda is still using this component across multiple pages. If she changes ho
 
 ```php
 // WebServer/Documents/_globals/Budget/PreApprovals.php
-
+<?php
 namespace Budget;
 
 class PreApprovals {
@@ -221,7 +221,8 @@ $temp_id = $_SESSION['budget']['tempID'];
 // ...
 <?php \Budget\PreApprovals::renderMyPendingApprovalsButton($temp_id); ?>
 ```
-
+## Review
 In summary, Zelda used Gateway classes to:
 - avoid manually updating copied & pasted code
-- put my page's behaviou
+- replicate my page's functionality without having to understand all the edge cases
+- avoid overwriting variables set in other files
