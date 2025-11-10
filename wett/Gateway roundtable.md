@@ -40,17 +40,22 @@ ORDER BY system_entry_date DESC
 LIMIT 2500
 ```
 
-It's generated with the following function
+It's generated with the following function:
 
 ```php
-// arguments omitted for brevity
-function selectQuery() {
-	$highest_approval = getMyHighestApprovalLevel();
-	$where = $where . " AND $h"
-
-	$where = whereClause()
+// arguments omitted & query shortened for brevity
+function selectPreapprovals($connection, $params, $temp_id) {
+	// example of using one of the optional params directly
+	if (isset($params['entered_before'])) {
+		$where .= " AND system_entry_date <= '" . $params['entered_before'] . "'";
+	}
+	// .. 
+	$highest = getMyHighestApprovalLevel($temp_id) . "_approved";
+	$where = $where . " AND $highest = 'u'";
 	$sql = "SELECT
 				...
 			WHERE $where"
+	$result = mysqli_query($connection, $sql);
+	
 }
 ```
