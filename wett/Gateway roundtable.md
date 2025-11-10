@@ -45,17 +45,29 @@ It's generated with the following function:
 ```php
 // arguments omitted & query shortened for brevity
 function selectPreapprovals($connection, $params, $temp_id) {
-	// example of using one of the optional params directly
+	// example of using one of the optional params
 	if (isset($params['entered_before'])) {
 		$where .= " AND system_entry_date <= '" . $params['entered_before'] . "'";
 	}
-	// .. 
+	
+	// ... more optional params ....
+	
+	// temp_id is required
 	$highest = getMyHighestApprovalLevel($temp_id) . "_approved";
 	$where = $where . " AND $highest = 'u'";
+	
 	$sql = "SELECT
 				...
 			WHERE $where"
 	$result = mysqli_query($connection, $sql);
 	
+	$arr = [];
+	while ($row = mysqli_fetch_assoc($result)) {
+		$arr[] = $row;
+	}
+	return $arr;
 }
 ```
+
+For Preapprovals, Zelda wrote a component that displays the amount of pending approvals a user has:
+![component.png]()
