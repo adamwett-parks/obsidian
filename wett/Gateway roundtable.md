@@ -1,3 +1,5 @@
+## Background
+
 In legacy, pages are very idiosyncratic, and it can be difficult to write code that can reused across pages. 
 For example in the Preapprovals rewrite, we use a query like the following to get a user's (Joe Shimel's) pending approvals.
 
@@ -77,4 +79,35 @@ Looks good Zelda!
 
 To go the value into her component she could have just copied & pasted my query into her component. For a more mature page, this isn't such a big deal, we do this all the time. But since I was still actively working on my page, she needed a way to replicate the behavior of my query without having to manually update her copy each time I tweaked it.
 
-To do this, we used a Gateway Class.*
+To do this, we refactored my query into a *Gateway Class.*
+
+## What is a Gateway Class?
+
+A Gateway class put simply, is a container for static functions. It doesn't have any state. Here's an example:
+
+```php
+// _globals/Budget/PreApprovals.php
+
+namespace Budget;
+
+class PreApprovals {
+	
+	public static function helloWorld() {
+		return "Hello, world!"
+	}
+	
+}
+
+// on another page
+$hello_world = \Budget\PreApprovals::helloWorld();
+/*				^      ^             ^
+				|      |             |
+				|	   class name    function name  
+				|
+				namespace
+*/
+
+// you might prefer this syntax, they do the same thing
+$PreApprovals = new \Budget\PreApprovals();
+$hello_world_alt = $PreApprovals->helloWorld();
+```
