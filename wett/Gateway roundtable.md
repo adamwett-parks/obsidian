@@ -161,8 +161,8 @@ Awesome! Now Zelda can use `getPendingApprovalCount` without knowing anything ab
 But Zelda is still using this component across multiple pages. If she changes how it looks on one, she'll have to manually change how it looks on all of them. She tried using `include` to link her file, but she was running into issues with variable names she used in her file overwriting the variables set on the pages she used.  Let's use a Gateway class to solve both of these problems:
 
 ```php
-// WebServer/Documents/_globals/Budget/PreApprovals.php
 <?php
+// WebServer/Documents/_globals/Budget/PreApprovals.php
 namespace Budget;
 
 class PreApprovals {
@@ -216,13 +216,15 @@ class PreApprovals {
 Now when Zelda wants to use her button she just writes:
 
 ```php
+<?php
 // some_other_page.php
 $temp_id = $_SESSION['budget']['tempID'];
 // ...
 <?php \Budget\PreApprovals::renderMyPendingApprovalsButton($temp_id); ?>
 ```
-## Review
-In summary, Zelda used Gateway classes to:
+## TLDR
+In summary, we can use Gateway classes to:
 - avoid manually updating copied & pasted code
-- replicate my page's functionality without having to understand all the edge cases
+- replicate a page's functionality without having to understand all it's edge cases
 - avoid overwriting variables set in other files
+- split business logic into digestible steps without side effects
