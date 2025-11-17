@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gateway roundtable.md",
+                "file": "docs/Using XDebug.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gateway roundtable"
+              "title": "Using XDebug"
             }
           },
           {
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "roundtable 2025-07-07.md",
+                "file": "docs/Using XDebug.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for roundtable 2025-07-07"
+              "title": "Backlinks for Using XDebug"
             }
           },
           {
@@ -167,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,8 +183,9 @@
   },
   "active": "6860cd5fa9b9cb52",
   "lastOpenFiles": [
-    "Gateway roundtable.pdf",
     "Gateway roundtable.md",
+    "docs/Using XDebug.md",
+    "Gateway roundtable.pdf",
     "Writing Cleaner Code on Legacy.md",
     "component.md",
     "component.png",
