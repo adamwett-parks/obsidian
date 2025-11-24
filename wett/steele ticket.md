@@ -27,6 +27,8 @@ You also have access to:
 - The ID (Image Database-Scenics, Plants, Animals, etc.)
 - Travel Authorization
 
-We recently just spun off Equipment from Fuel/Vehicle/Equipment into its own application. The application owner (Michael Huffman) has asked us to postpone any new access requests during testing. If you need access to this please add him to the 
+We recently just spun off Equipment from Fuel/Vehicle/Equipment into its own application. The application owner (Michael Huffman) has asked us to postpone any new access requests during testing.
+
+Are there any other applications you need access to?
 
 ---
