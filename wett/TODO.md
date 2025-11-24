@@ -1,2 +1,4 @@
 - document all the PAR changes!!
-- 
+- PA-1522 document PAR bugfix
+- jira automation for waiting for customer
+- jira desktop notifications
