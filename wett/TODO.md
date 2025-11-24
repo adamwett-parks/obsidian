@@ -4,3 +4,5 @@
 - jira desktop notifications
 - write a query to get similar app permissions based on their position
 - logseq
+- talk to rachel about header-sidebar a11y
+- 
