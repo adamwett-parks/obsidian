@@ -2,3 +2,5 @@
 - PA-1522 document PAR bugfix
 - jira automation for waiting for customer
 - jira desktop notifications
+- write a query to get similar app permissions based on their position
+- logseq
