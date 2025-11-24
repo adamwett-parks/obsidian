@@ -1,0 +1,5 @@
+- query to split permissions might be messed up??
+- steele has a username change
+- steele had a password change
+- benson says don't give access to Equipment just yet
+	- huffman wants permissions scoped in equipment
