@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "2025-12-22 rt"
             }
-          },
-          {
-            "id": "cb6a3dfd177836b9",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Gateway roundtable.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Gateway roundtable"
-            }
           }
         ]
       }
@@ -184,13 +172,13 @@
   },
   "active": "6860cd5fa9b9cb52",
   "lastOpenFiles": [
-    "Gateway roundtable.md",
+    "Gateway roundtable.pdf",
     "meetings/2025-12-22 rt.md",
+    "Gateway roundtable.md",
     "steele ticket.md",
     "meetings/2025-11-24.md",
     "docs/Using XDebug.md",
     "Untitled 10.md",
-    "Gateway roundtable.pdf",
     "Writing Cleaner Code on Legacy.md",
     "component.md",
     "component.png",
@@ -215,7 +203,6 @@
     "meetings/2025-09-29 rt.md",
     "templates/{{date}} roundtable.md",
     "meetings/Untitled.base",
-    "meetings/2025-06-27 v2.md",
     "templates",
     "atoms",
     "logs",
