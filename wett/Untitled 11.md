@@ -6,3 +6,5 @@
 - legally bulletproof
 - dont give a lot of info, make it dead simple
 - make it super private, account number
+- no is this still available, ad will disappear
+- 
