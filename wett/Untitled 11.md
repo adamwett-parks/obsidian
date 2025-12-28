@@ -1,0 +1,8 @@
+- cut down on idiots
+- bulletproof so all that you're doing is 
+- make a unique way for two people to get in touch
+- there's some trust involved
+- going to cost you $20 to mail it, go pick it up
+- legally bulletproof
+- dont give a lot of info, make it dead simple
+- make it super private, account number
