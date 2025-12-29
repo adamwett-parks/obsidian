@@ -1,0 +1,64 @@
+- 2025-11-24
+  collapsed:: true
+	- cathy
+		- document tickets more
+		- access requests
+		- name changes
+		- tempid changes
+		- password changes
+		- take screenshots of access before & after
+		- any research you do, make sure you describe it in the ticket
+		- SLOW DOWN
+		- test thoroughly before you release
+			- don't test as an admin
+			- test for the customer
+			- test for people in other units
+			- if the changes are cross app, check cross app
+		- our release schedule is the wild west, we need to start communicating more about what we are pushing
+		- BUOF is nickel & diming parks
+			- PAR shouldn't be used for reconciliation
+			- PAR isn't there for an accounting purpose, it's only for checking if it's OK budget wise
+			- BUOF will handle policy for over & underspends
+		- we aren't m365, need to talk to Eric about what our team actually does
+	- cole
+		- permissions were given to everyone who's submitted is now given
+		- PAR now supports non-cashier users with the role `PA_base`
+		- DISUs can now request PCards and Shimel would be the approver of their requests
+		- People cannot approve their own PCard requests
+	- benson
+		- PR-63 bug where "Zach" could see all other requests submitted by "Zach"
+	- ian
+		- iframes in scrolling headlines in MC
+		- wednesday 2025-11-26 is Ian's last day
+	- michael
+		- going to attend NCTC conference 2025-12-12, doesn't know what it is exactly even though he went last year
+		- AMU update shipping 2025-12-01
+	- janet
+		- working on budget tool
+		- might need help making functions
+	- tony
+		- question: if someone is reconning a pcard, how would someone even know
+	- jake
+		- BBTP in Jira
+		- STMP issues
+	- questions
+		- should we explain the philosophy of what a Pre-Approval is in the app guide / procedures?
+			- it seems like since we are making big changes the buof is amorphous on this
+			- BUOF should write this, they never send it out to their users
+			- talk to kelly about this
+			- ditrcit level training never goes down
+			- have a modal with a message from the BUOF to display for the first week
+			- kelly seems like he would understand our position
+			- ask kelly WHY?
+		- should we wait to pull main on production? monday morning?
+			- i didn't ask this in the meeting since my section was getting long
+- 2025-12-01
+	- cathy
+		- admin summary table re-labeling
+		- major maintenence & CI should not have an AMU
+		- last 2 weeks of December everyone is expected to be in their 'slio', if people can't answer your questions then set it aside
+			- we still have to do tickets but hopefully will still be quiet
+		- we get wed thurs fri near christmas off
+	- cole
+		- preapproval button count inaccurate
+		-
