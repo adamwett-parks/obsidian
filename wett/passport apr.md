@@ -1,1 +1,2 @@
-get kris anne to fill out an APR
+- get kris anne to fill out an APR
+- deploy to RHEL at first, then AWS
