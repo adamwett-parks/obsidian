@@ -20,42 +20,23 @@
               "icon": "lucide-file",
               "title": "TODO"
             }
-          }
-        ]
-      },
-      {
-        "id": "07d9eaf6721ac922",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "cb6a3dfd177836b9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "meetings/2025-12-22 rt.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-12-22 rt"
-            }
           },
           {
-            "id": "1aade3dc97eb1a25",
+            "id": "4d9b0a1b2e1a034c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "steele ticket.md",
+                "file": "passport apr.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "steele ticket"
+              "title": "passport apr"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,11 +195,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67f0ff2d8cdcf282",
+  "active": "4d9b0a1b2e1a034c",
   "lastOpenFiles": [
+    "passport apr.md",
+    "TODO.md",
+    "steele ticket.md",
     "meetings/2025-11-17 rt.md",
     "Untitled 11.md",
-    "steele ticket.md",
     "sinus.md",
     "Untitled 3.md",
     "Untitled 4.md",
@@ -232,7 +215,6 @@
     "meetings/2025-11-03 rt.md",
     "meetings/2025-12-22 rt.md",
     "meetings/2025-11-24.md",
-    "TODO.md",
     "templates/{{date}} roundtable.md",
     "Gateway roundtable.pdf",
     "docs/Using XDebug.md",
@@ -246,7 +228,6 @@
     "Untitled.base",
     "2025-11-04.md",
     "V2 Dev Guide.md",
-    "logs/2025-10-30.md",
     "meetings/Untitled.base",
     "templates",
     "atoms",
