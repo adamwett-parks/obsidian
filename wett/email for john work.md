@@ -21,3 +21,15 @@
 	- Revamped auth to use SSO similar to hellbender
 	- Added better offline support to app via Tanstack DB
 	- Added Tailwind to Expo app
+	- Remote from 10:00am - 6:15pm
+
+---
+Passport Gameplan Meeting: Jake, David, Cole, & John
+get extremely specific requirements / APR from KAB
+decided to use "OG" codebase, and incorporate features piecemeal from SDC Fall 25
+leaning towards making an Expo application as it makes more sense for an offline app
+Hellbender
+Got more familiar with legacy Warehouse
+- Made decent progress on Hellbender warehouse
+- Helping out Jake E with B0149 in HB / permissions
+- Passport: lots of misc work: new repo, setting up Expo POC, SSO, etc.
