@@ -21,9 +21,12 @@
 	- Revamped auth to use SSO similar to hellbender
 	- Added better offline support to app via Tanstack DB
 	- Added Tailwind to Expo app
-	- Remote from 10:00am - 6:20pm
-- Monday 2026-01-26
-	- exploring Railway, deployed 
+	- Remote from 10:00am - 6:20pm (woke up with migraine)
+- Monday 2026-01-26 (morning):
+	- exploring Railway, got a deployment working smoothly via CI/CD
+	- ticket to add OPRA to CHP
+	- basic access ticket
+	- Remote from 9:00-5:00pm
 
 ---
 Passport Gameplan Meeting: Jake, David, Cole, & John
