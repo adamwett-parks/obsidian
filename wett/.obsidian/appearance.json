@@ -1,5 +1,6 @@
 {
-  "cssTheme": "Obsidian Nord",
+  "cssTheme": "Typomagical",
   "accentColor": "",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "translucency": false
 }
