@@ -21,3 +21,9 @@ Granted, I definitely didn't use any of these words in my head (especially since
 ---
 
 Everything useful and productive, upon closer examination, makes me feel depressed. I fucking love my computer. It's awesome. But it's built with human suffering. Someone online called it "chinese slave jewelry"
+
+![[Screenshot 2026-02-08 at 14.26.26@2x.jpg]]
+
+What the fuck, lol?
+
+I can't find the comment. I think it's a little extreme. Of course everything we do, consume, and enjoy is tied to some form of suffering. Human or non-human.
