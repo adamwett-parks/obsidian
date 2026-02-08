@@ -38,3 +38,8 @@ Anything and everything we do must -- I'm losing my train of thought and I want 
 
 ---
 
+Everywhere I go, everything I do, every conversation I have, every idea that pops into my head inevitably leads to thinking about this shit. I'm tired of it. I feel like can't truly enjoy anything anymore.
+
+I can't even be genuinely altruistic anymore, because even "doing the right thing" serves my self interests. And being aware of this serves no purpose. If anything it's counterproductive.
+
+I consider myself to be a very fortunate person. I grew up wealthy and with a supportive, healthy family. My dad is a doctor. I never have to worry about finances. He subsidizes my entire life. I am currently working my first "big boy" full-time job
