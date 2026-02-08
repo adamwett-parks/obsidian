@@ -28,7 +28,7 @@ What the fuck, lol?
 
 I can't find the comment. I think it's a little extreme. Of course everything we do, consume, and enjoy is tied to some form of suffering. Human or non-human. We live on stolen land; Our ancestors did terrible things; There is no ethical consumption under capitalism.; et cetera, et cetera.
 
-But a small part of me is drawn to it's underpinnings. Despite how whiny and ineffective these mantras are, it *is* actually true. Most Americans (and other countries too of course) regularly participate in a system that, at the bottom, is fueled by people who are suffering and/or people trying to avoid suffering. It's just a part of life. Not just modern life, but basic biology. Entropy even.
+But a small part of me is drawn to its underpinnings. Despite how whiny and ineffective these mantras are, the comment *is* actually true. Most Americans (and other countries too of course) regularly participate in a system that, at the bottom, is fueled by people who are suffering and/or people trying to avoid suffering. It's just a part of life. Not just modern life, but basic biology. Entropy even.
 
 For a system to keep operating, it must consume more than it outputs. That's essentially (my understanding of) the 2nd law of thermodynamics. It doesn't matter if you're a human, a corporation, a single-celled organism, or a star, you are bound to this restriction.
 
@@ -54,4 +54,6 @@ Recently he's been trying to beat the market. Despite the papers I've sent him a
 
 It doesn't matter. It's his money. He can do with it as he pleases. He could put all of it on red tomorrow and while I'd be concerned, he's set (/ is setting me) up well enough to not really care.
 
-I worry that I am doing something similar. Am I really debunking my opponents, or am I merely convincing myself that they are wrong?
+I worry that I am doing something similar. Am I really debunking my opponents, or am I merely convincing myself that they are wrong? In an attempt to mitigate this, I try to keep an open mind and play devil's advocate as much as possible. It doesn't matter if I'm right. Most of the time, you can't be "right" and making that your goal is badly defined. I think it's better to try to be less wrong. Who "won" a debate is less important than the new trains of thought that it brings you down. If you're shutting out any chance of your opponent being right, then you're missing out on their perspective.
+
+I think everyone is "right" in their own sense. Everyone wants to do the "right" thing. Even the most evil people, usually, in some perverted way, think that what they are doing is the right thing. When I do something wrong, at the time, I feel as it's the right thing to do. My mistakes always come from good intentions. It's only from acquiring new information that I'm able to reflect on my reasoning and find the flaw in what I did and attempt to not repeat the mistake.
