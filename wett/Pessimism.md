@@ -30,4 +30,11 @@ I can't find the comment. I think it's a little extreme. Of course everything we
 
 But a small part of me is drawn to it's underpinnings. Despite how whiny and ineffective these mantras are, it *is* actually true. Most Americans (and other countries too of course) regularly participate in a system that, at the bottom, is fueled by people who are suffering and/or people trying to avoid suffering. It's just a part of life. Not just modern life, but basic biology. Entropy even.
 
-For a system to keep operating, it must consume more than it outputs. That's essentially the 2nd law of thermodynamics. It doesn't matter if you're a hu
+For a system to keep operating, it must consume more than it outputs. That's essentially (my understanding of) the 2nd law of thermodynamics. It doesn't matter if you're a human, a corporation, a single-celled organism, or a star, you are bound to this restriction.
+
+In my opinion, this fucking sucks!
+
+Anything and everything we do must -- I'm losing my train of thought and I want to keep writing in an attempt to feel better.
+
+---
+
