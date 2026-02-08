@@ -42,4 +42,4 @@ Everywhere I go, everything I do, every conversation I have, every idea that pop
 
 I can't even be genuinely altruistic anymore, because even "doing the right thing" serves my self interests. And being aware of this serves no purpose. If anything it's counterproductive.
 
-I consider myself to be a very fortunate person. I grew up wealthy and with a supportive, healthy family. My dad is a doctor. I never have to worry about finances. He subsidizes my entire life. I am currently working my first "big boy" full-time job
+I consider myself to be a very fortunate person. I grew up wealthy and with a supportive, healthy family. My dad is a doctor. I never have to worry about finances. He subsidizes my entire life. I am currently working my first "big boy" full-time job. All of my income is either invested or spent on non-essentials. I don't resent this. I'm quite grateful for it. The alternative would suck. I think that people who feel better or more accomplished than others for being "self-made" or coming from a less fortunate background are 
