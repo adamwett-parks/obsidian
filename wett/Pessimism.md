@@ -32,7 +32,7 @@ But a small part of me is drawn to its underpinnings. Despite how whiny and inef
 
 For a system to keep operating, it must consume more than it outputs. That's essentially (my understanding of) the 2nd law of thermodynamics. It doesn't matter if you're a human, a corporation, a single-celled organism, or a star, you are bound to this restriction.
 
-In my opinion, this fucking sucks!
+In my opinion, this fucking sucks! It doesn't absolve me of guilt, just explains why, on average, we all are hypocrites. "It's an explanation, not a justification."
 
 Anything and everything we do must -- I'm losing my train of thought and I want to keep writing in an attempt to feel better.
 
@@ -57,3 +57,6 @@ It doesn't matter. It's his money. He can do with it as he pleases. He could put
 I worry that I am doing something similar. Am I really debunking my opponents, or am I merely convincing myself that they are wrong? In an attempt to mitigate this, I try to keep an open mind and play devil's advocate as much as possible. It doesn't matter if I'm right. Most of the time, you can't be "right" and making that your goal is badly defined. I think it's better to try to be less wrong. Who "won" a debate is less important than the new trains of thought that it brings you down. If you're shutting out any chance of your opponent being right, then you're missing out on their perspective.
 
 I think everyone is "right" in their own sense. Everyone wants to do the "right" thing. Even the most evil people, usually, in some perverted way, think that what they are doing is the right thing. When I do something wrong, at the time, I feel as it's the right thing to do. My mistakes always come from good intentions. It's only from acquiring new information that I'm able to reflect on my reasoning and find the flaw in what I did and attempt to not repeat the mistake.
+
+The quicker I can identify my biases, the quicker I can implement what I've learned from my experiences.
+
