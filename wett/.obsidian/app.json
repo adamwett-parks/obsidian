@@ -8,7 +8,8 @@
     "downscalePercent": 100
   },
   "readableLineLength": false,
-  "strictLineBreaks": false,
+  "strictLineBreaks": true,
   "showLineNumber": true,
-  "spellcheck": false
+  "spellcheck": false,
+  "showInlineTitle": true
 }

@@ -2,5 +2,7 @@
   "cssTheme": "Typomagical",
   "accentColor": "",
   "theme": "obsidian",
-  "translucency": false
+  "translucency": false,
+  "showViewHeader": false,
+  "showRibbon": true
 }
