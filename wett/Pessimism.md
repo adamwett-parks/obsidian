@@ -8,4 +8,9 @@ The book that ruined my life is "Bullshit Jobs" by David Graeber. My pitch for t
 
 I'm not going to give a deep dive on the book here. If you are not familiar and/or want more context, the [essay it is based upon](https://strikemag.org/bullshit-jobs/) is a good refresher and will be enough for you to get the gist of what the book is about.
 
-I grew up on computers. Specifically, Macs. According to my dad, I mostly learned to read by accidentally enabling VoiceOver and hahv
+I grew up on computers. Specifically, Macs. According to my dad, I mostly learned to read by accidentally enabling VoiceOver and having it read stuff to me. Before I had an admin account on the family computer, I wasn't able to install anything. Back in the day, most apps and games required admin access to run their `.pkg` installer. 
+
+When I was really bored, I would dick around in anything that was already installed on the computer. I vivdly remember playing with the templates in the office applications like Pages and Numbers and thinking, "What is the point of this? Who actually uses this?". A lot of the graphs and premade documents confused me. Not that the template was useless, but the actual point of the document itself.
+
+Who would ever need to write a letter structured like this, and why? Wouldn't two people communicating just do so naturally, like a conversation? Precompiling the information into this rigid structure seemed poi
+
