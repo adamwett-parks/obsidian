@@ -12,5 +12,9 @@ I grew up on computers. Specifically, Macs. According to my dad, I mostly learne
 
 When I was really bored, I would dick around in anything that was already installed on the computer. I vivdly remember playing with the templates in the office applications like Pages and Numbers and thinking, "What is the point of this? Who actually uses this?". A lot of the graphs and premade documents confused me. Not that the template was useless, but the actual point of the document itself.
 
-Who would ever need to write a letter structured like this, and why? Wouldn't two people communicating just do so naturally, like a conversation? Precompiling the information into this rigid structure seemed poi
+Who would ever need to write a letter structured like this, and why? Wouldn't two people communicating just do so naturally, like a conversation? Precompiling the information into this rigid structure seemed pointless. Unproductive. Inefficient. A waste of time.
+
+Granted, I definitely didn't use any of these words in my head (especially since I had to spell-check the word "definitely"). Despite now being aware of the actual purpose of a letterhead, a CV or a resume, bar and pie charts, etc, looking at these templates still brings up the very same emotions I felt as a kid. Almost akin to a nostalgic, melancholy smell.
+
+"Bullshit Jobs" reaffirmed these emotions and my skepticism towards the usefulness of the people and tasks that these templates were designed to assist.
 
