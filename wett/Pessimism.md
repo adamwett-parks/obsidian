@@ -44,4 +44,8 @@ I can't even be genuinely altruistic anymore, because even "doing the right thin
 
 I consider myself to be a very fortunate person. I grew up wealthy and with a supportive, healthy family. My dad is a doctor. I never have to worry about finances. He subsidizes my entire life. I am currently working my first "big boy" full-time job. All of my income is either invested or spent on non-essentials. I don't resent this. I'm quite grateful for it. The alternative would suck. I think that people who come from a less fortunate background and feel morally superior or more accomplished than their more fortunate counterparts are foolish. I get it though, it's a coping mechanism from being dealt a bad hand.
 
-No one deserves anything though. That's not reality. Yeah it sucks, but there's no law of the universe that enforce it.
+However, no one deserves anything. That's not reality. Yeah it sucks, but there's no law of the universe that enforce it. Our society tries to, but at the end of the day, we will all do whatever it takes to keep playing the game.
+
+One thing that's been worrying me recently is being "too intelligent for my britches". I think that I'm quite good at "arguing". Not convincing the other person that I'm right, but being able to defend my position, regardless of whether it's correct or not.
+
+I see this in my dad, and I get most of my tendencies from his genes. He's turning 67 this year. He's very intelligent and analytical. He has described himself as being "heartless at times", but I think heartless is a bad choice of words. He's an empathetic person, but if you're wrong, you're wrong, and he won't bullshit you
