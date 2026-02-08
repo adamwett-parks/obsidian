@@ -26,4 +26,8 @@ Everything useful and productive, upon closer examination, makes me feel depress
 
 What the fuck, lol?
 
-I can't find the comment. I think it's a little extreme. Of course everything we do, consume, and enjoy is tied to some form of suffering. Human or non-human.
+I can't find the comment. I think it's a little extreme. Of course everything we do, consume, and enjoy is tied to some form of suffering. Human or non-human. We live on stolen land; Our ancestors did terrible things; There is no ethical consumption under capitalism.; et cetera, et cetera.
+
+But a small part of me is drawn to it's underpinnings. Despite how whiny and ineffective these mantras are, it *is* actually true. Most Americans (and other countries too of course) regularly participate in a system that, at the bottom, is fueled by people who are suffering and/or people trying to avoid suffering. It's just a part of life. Not just modern life, but basic biology. Entropy even.
+
+For a system to keep operating, it must consume more than it outputs. That's essentially the 2nd law of thermodynamics. It doesn't matter if you're a hu
