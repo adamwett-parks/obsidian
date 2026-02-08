@@ -48,4 +48,10 @@ However, no one deserves anything. That's not reality. Yeah it sucks, but there'
 
 One thing that's been worrying me recently is being "too intelligent for my britches". I think that I'm quite good at "arguing". Not convincing the other person that I'm right, but being able to defend my position, regardless of whether it's correct or not.
 
-I see this in my dad, and I get most of my tendencies from his genes. He's turning 67 this year. He's very intelligent and analytical. He has described himself as being "heartless at times", but I think heartless is a bad choice of words. He's an empathetic person, but if you're wrong, you're wrong, and he won't bullshit you
+I see this in my dad, and I get most of my tendencies from his genes. He's turning 67 this year. He's very intelligent and analytical. He has described himself as being "heartless at times", but I think heartless is a bad choice of words. He's an empathetic person, but if you're wrong, you're wrong, and he (usually) won't bullshit you otherwise.
+
+Recently he's been trying to beat the market. Despite the papers I've sent him and backtests I've done for him that suggest that he's not actually expected to profit more than an index fund, he continues with his strategy. I'm not sure what causes this exactly. Ego? Hubris?
+
+It doesn't matter. It's his money. He can do with it as he pleases. He could put all of it on red tomorrow and while I'd be concerned, he's set (/ is setting me) up well enough to not really care.
+
+I worry that I am doing something similar. Am I really debunking my opponents, or am I merely convincing myself that they are wrong?
